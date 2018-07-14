@@ -1,0 +1,13 @@
+[t3]
+FileName1=t3.html
+URL1=https://guriensino.unipampa.edu.br/guri/ptl/sistema/showLogin
+Total=2
+RequestHeaderFile=t3_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t3_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_3.xml
+FileName2=t3_estilo_menu.css
+URL2=https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/estilo_menu.css
+[ProtocolInfo]
+ProtocolId=QTWeb

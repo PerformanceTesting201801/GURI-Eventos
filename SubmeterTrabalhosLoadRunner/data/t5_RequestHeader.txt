@@ -1,0 +1,11 @@
+POST /ListAccounts?gpsia=1&source=ChromiumAccountReconcilor,counter:0,load_time_ms:822&json=standard HTTP/1.1
+Host: accounts.google.com
+Connection: keep-alive
+Content-Length: 1
+Origin: https://www.google.com
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: SID=AAbgfalmIv2F9oL-WrM_OIBdGqzkoHB-uFkTVbv2Fh1y05FH3-W-1dTe9tRWMLX5wplgHA.; HSID=Adivmafu6QE9kjJXP; SSID=A1mHUq9yh-s2A-va2; APISID=lXrSVif8FgGGmZUR/AOKMY9oM3gbvPVhhw; SAPISID=ziTGrh3nimdpTNII/Aek96XtLLnIJ09Q-t; ACCOUNT_CHOOSER=AFx_qI7jm5SynWlDtgahhmkPAP1itaehfX9-W7ueUjLUw0hFpR70QNEK2bcwdMWTxoeUYc9nP9JXldLhA6YzwIz6LEbchrDQ6V8NFzxDn8DYnLP9Xc34I4uXTdjoHMQA3VQ-SXfC90JLiXNSvwWbnWkKxjouLMwcUA; LSID=doritos|lso|mail|o.mail.google.com|o.myaccount.google.com|o.notifications.google.com|o.smartlock.google.com|s.BR|s.blogger|s.youtube|ss|youtube:AAbgfajeAtUJvYFqk-IZpzvu9-sh_a3IYn3VWAG7vMAmD1ERxftxR0Bh3vm6ahUUDCD1Gg.; OGP=-19005936:; OGPC=19005936-1:19006965-1:19007018-1:; GAPS=1:7s92gCrnHqbDeuvRKZ2QVZohhPGcQ9gltfo8o4uv9bLUsXbxB3ciAwWZnnQOESQBpJK2LWNy4hV-2uleWHDLh-yA0ebPKQ:YpEN-UFTATCOfnJx; NID=134=ZyaOVdJhholZxrueUXUD6cTEDgjk9ljqZYBM_doqaqbfrY69f6mGV6sZK3L4DDNyX4c9HGmPa-4B9wRaGKoPR36RFuaCqmD64u86IvH-24IJpqmeIj_cIR6AU3imaDJxgqXY85K6govzFXjQHV62NNWemOrXROHFlIvcqluWVAegLuvuaGmR0raj6DhnHp9UTPLuVaxmqIzg3mOfpXuBzxeV8FflyvLEyTFtmKk7umwjhOmr1BtZOGLZz7nM-mYhh4j5EBOuCrE; 1P_JAR=2018-7-13-18; SIDCC=AEfoLeaHRBsa9VDaakj5yGiCGmF5HUTVfCVfiezzskfB4vqGCZUSkCNJTk0hch2GV_5dIUjcQUJy
+

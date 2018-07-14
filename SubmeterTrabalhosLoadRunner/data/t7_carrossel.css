@@ -1,0 +1,113 @@
+/* Plugin de noticias */
+#noticias {    
+    width: 100%;
+    height: 100%;     
+    overflow:hidden;     
+    float: left;
+}
+
+#noticias .viewport { 
+    float: left; 
+    width: 290px; 
+    height: 130px; 
+    overflow: hidden; 
+    position: relative;    
+}
+
+#noticias .buttons { 
+    display: block; 
+    margin: 10px 10px 0 0; 
+    float: left; 
+}
+#noticias .next { 
+    margin: 10px 0 0 10px;  
+}
+
+#noticias .disable { 
+    visibility: hidden; 
+}
+#noticias .overview { 
+    list-style: none; 
+    position: absolute; 
+    padding: 0; 
+    margin: 0; 
+    left: 0; 
+    top: 0; 
+}
+#noticias .overview li{ 
+    float: left; 
+    margin: 0 0 0 0; 
+    padding: 1px; 
+    height: 121px; 
+    border: 0px solid; 
+    width: 290px;
+}
+
+#noticias .pager { 
+    overflow:hidden; 
+    list-style: none; 
+    clear: both;     
+    margin-left: -40px;
+    margin-top: 10px;
+    text-align:center;
+    width: 100%;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+#noticias .pager li { 
+    float: left; 
+}
+#noticias .pagenum { 
+    background-color: #fff transparent; 
+    text-decoration: none; 
+    text-align: center; 
+    padding: 5px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    display: block; 
+}
+
+#noticias .active {
+    font-weight: bold;
+    font-size:11pt;
+}
+
+#noticias .titulo_noticia {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;    
+    position: relative;
+    z-index: 1;
+    padding-left: 0 !important;
+    margin: 10px 0 !important;
+    float: left;
+}
+
+#noticias .texto_noticia {
+    font-size:10pt;        
+    position: relative;
+    z-index: 1;
+}
+
+#imagem_noticia {
+    float:left;
+    width:30%;    
+    position: relative;
+    z-index: 1;
+}
+
+#corpo_noticia{
+    float:left;
+    width:66%;
+    margin-top:-15px;
+    margin-left: 0px;   
+    position: relative;
+    z-index: 1;
+}
+
+#corpo_noticia p {padding-left: 0 !important;}
+
+#imagem_titulo {
+    width: 100%;
+    height: 100%
+}

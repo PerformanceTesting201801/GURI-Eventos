@@ -1,0 +1,211 @@
+/** 
+ * função para o autocomplete da area de conhecimento
+ */    
+$(document).ready(function() { 
+    //input de autocomplete para o nome da area de conhecimento   
+    $("#txtNome").autocomplete({        
+       source: $("#BASE_URL").val()+'evt/evento/getAreaAjax',
+        minLength: 3,  
+        select: function(event, ui) {
+            $('#txtNome').val(ui.item.value);
+            $('#txtIdArea').val(ui.item.id);
+            $('#txtNome').focus();
+        },
+        search: function(event, ui) {
+            $("#responsavel_load").show();                    
+        },
+        response: function(event, ui) {
+            $("#responsavel_load").hide();                                  
+       }
+    });
+    
+    testarModalidade($("#txtIdModalidade :selected").val());
+    
+});
+
+
+/**
+ * Funcao javascript para buscar a modalidade
+ * @param integer areaSuperior
+ * @returns String
+ */
+function buscarModalidade(categoria, exibeModalidade){
+    var URL     = $("#BASE_URL").val();
+    var loading = "";
+    var combo   = "";
+    
+    buscarArea(null);
+    
+    if(exibeModalidade == 'true' || exibeModalidade == null){
+        loading = "#loading_modalidade";
+        combo = "#txtIdModalidade";        
+        if(categoria){        
+            $(loading).show();
+            $.post(URL+'evt/evento/buscarModalidadeAjax/', 
+            {categoria:categoria},
+            function(data) {                
+                $(loading).hide();            
+                if(data.length > 0) {
+                   $(combo).html(data); 
+                } else {
+                   $(combo).html('<option value="">Nada encontrado</option>');  
+                }
+            });   
+        }else{
+            $(combo).html('<option value="">Selecione uma categoria acima</option>');          
+        }      
+    }else{        
+        loading = "#loading_areas_sup"
+        combo = "#txtIdAreaSup";
+        if(categoria){        
+            $(loading).show();
+            $.post(URL+'evt/evento/buscarTodasAreasByCategAjax/', 
+            {categoria:categoria},
+            function(data) {    
+                $(loading).hide();            
+                if(data.length > 0) {
+                   $(combo).html(data); 
+                } else {
+                   $(combo).html('<option value="">Nada encontrado</option>');  
+                }
+            });   
+        }else{
+            $(combo).html('<option value="">Selecione uma categoria acima</option>');          
+        }    
+    }
+}
+
+/**
+ * Funcao javascript para buscar o programa
+ * @param integer areaSuperior
+ * @returns String
+ */
+function buscarPrograma(categoria){
+    var URL     = $("#BASE_URL").val();
+    var loading = "#loading_programa";
+    var combo   = "#txtIdPrograma";
+          
+    $('#txtIdPrograma').html('<option value="">Não se aplica</option>');
+    if(categoria){        
+        $(loading).show();
+        $.post(URL+'evt/evento/buscarProgramaAjax/', 
+        {categoria:categoria},
+        function(data) {                
+            $(loading).hide();            
+            if(data.length > 0) {
+               $(combo).html(data);                
+            } else {
+               $(combo).html('<option value="">Não se aplica</option>');  
+            }
+        });   
+    }else{
+        $(combo).html('<option value="">Não se aplica</option>');          
+    }      
+}
+
+/**
+ * Funcao javascript para buscar a area de conhecimento
+ * @param integer areaSuperior
+ * @returns String
+ */
+function buscarArea(modalidade){
+    var URL     = $("#BASE_URL").val();
+    var loading = "#loading_areas_sup";
+    var combo   = "#txtIdAreaSup";
+    
+    buscarAreaInferior(null);
+    $('#txtIdArea').html('<option value="">Selecione uma área de conhecimento acima</option>');
+    if(modalidade){        
+        $(loading).show();
+        $.post(URL+'evt/evento/buscarAreaAjax/', 
+        {modalidade: modalidade},
+        function(data) {                
+            $(loading).hide();            
+            if(data.length > 0) {
+               $(combo).html(data); 
+            } else {
+               $(combo).html('<option value="">Nada encontrado</option>');  
+            }
+        });   
+    }else{
+        $(combo).html('<option value="">Selecione uma modalidade acima</option>');        
+    }      
+}
+
+/**
+ * Funcao javascript para buscar a area de nivel inferior
+ * @param integer areaSuperior
+ * @returns String
+ */
+function buscarAreaInferior(areaSuperior) {
+    var URL     = $("#BASE_URL").val();
+    var loading = "#loading_areas";
+    var combo   = "#txtIdArea";
+    
+    if(areaSuperior){ 
+        $(loading).show();
+        $.post(URL+'evt/evento/buscarAreaInferiorAjax/', 
+            {areaSuperior: areaSuperior},
+            function(data) {                
+                $(loading).hide();            
+                if(data.length > 0) {
+                   $(combo).html(data); 
+                } else {
+                   $(combo).html(
+                    '<option value="">Nada encontrado</option>');  
+                }
+        });
+    }else{
+        $(combo).html('<option value="">Selecione uma área de conhecimento acima</option>');  
+    }
+}
+
+function buscarAreaInferiorEdicao(areaSuperior, subArea) {
+    var URL     = $("#BASE_URL").val();
+    var loading = "#loading_areas";
+    var combo   = "#txtIdArea";
+    
+    if (areaSuperior > 0) {
+        $(loading).show();
+        $.post(URL+'evt/participante/buscarAreaInferiorAjaxEdicao/'+subArea,
+            {areaSuperior:areaSuperior},
+            function(data) {
+                $(loading).hide();
+                if(data.length > 0) {
+                    $(combo).html(data);
+                } else {
+                    $(combo).html (
+                        '<option value="">Nada encontrado</option>');
+                }
+            });
+        
+    }
+}
+
+/**
+ * Funcao javascript para buscar testar a modalidade para resumo expandido
+ * @param integer areaSuperior
+ * @returns String
+ */
+function testarModalidade(campo) {
+    if(campo){
+        
+        var arr        = campo.split("|");
+        var modalidade = arr[0];
+        var URL        = $("#BASE_URL").val();
+
+        if(modalidade){
+            $.post(URL+'evt/participante/buscarModalidadesResumoExpAjax/', 
+            {modalidade:modalidade},
+            function(data) { 
+                if(data=="true"){    
+                    $("#resumo_expandido").show();
+                }else{
+                    $("#resumo_expandido").hide();
+                }
+            });   
+        }  
+    }else{
+         $("#resumo_expandido").hide();
+    }
+}

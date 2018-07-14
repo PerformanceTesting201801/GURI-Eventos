@@ -1,0 +1,15 @@
+[t24]
+FileName1=t24.html
+URL1=https://guriensino.unipampa.edu.br/guri/evt/participante/pesquisaOrientador/
+Total=3
+RequestHeaderFile=t24_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t24_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_24.xml
+FileName2=t24_ui-bg_highlight-hard_100_eeeeee_1x100.png
+URL2=https://guriensino.unipampa.edu.br/guri/public/js/jquery-ui-1.9.0/css/custom-theme/images/ui-bg_highlight-hard_100_eeeeee_1x100.png
+FileName3=t24_search.png
+URL3=https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/search.png
+[ProtocolInfo]
+ProtocolId=QTWeb

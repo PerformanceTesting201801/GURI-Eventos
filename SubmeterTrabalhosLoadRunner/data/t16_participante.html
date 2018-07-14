@@ -1,0 +1,101 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+$( document ).ready(function() {
+	    $('#resgataSenhaEmail').hide();
+            $('#resgataSenhaCPF').hide();
+            pesquisaEmail($("#txtEmail").val());
+            pesquisaCPF($("#txtCpf").val());
+            alternaCepZipcode($("#txtPais option:selected" ).val());
+            geraCaptcha($('input[name=txtIdiomaForm\\[\\]]:checked').val());
+	});
+
+
+function pesquisaEmail(value){    
+    var URL     = $("#BASE_URL").val();
+    var operacao = $("#txtOperacao").val();
+    
+    if (value) {        
+        $.post(URL+'evt/participante/buscarEmailParticipanteAjax/', 
+            {pesq: value},
+            function(data) {                
+                if((data.length > 0) && (operacao == "novo")) {
+                    $('#resgataSenhaEmailLabel').html('<b>Nota:</b> Já existe um cadastro de participante com este CPF.<br/>\n\
+                         Resgate seu perfil enviando uma nova senha para o e-mail cadastrado.<br/>\n\
+                         Caso não lembre do e-mail informado entre em contato com a comissão organizadora.');
+                    $('#resgataSenhaEmail').show();                    
+                }else {
+                    $('#resgataSenhaEmailLabel').html('');
+                    $('#resgataSenhaEmail').hide();
+                }
+        });
+    }
+}
+
+function pesquisaCPF(value){
+    var URL     = $("#BASE_URL").val();
+    var perfil  = '';
+    var operacao = $("#txtOperacao").val();
+    
+    if (value.trim() != "") {        
+        $.post(URL+'evt/participante/buscarCPFParticipanteAjax/', 
+            {pesq: value},
+            function(data) {                                
+                if((data.length > 0) && (operacao == "novo")) {
+                    perfil = JSON.parse(data);
+                    $('#resgataSenhaCPFLabel').html('<b>Nota:</b> Já existe um cadastro de participante com este CPF.<br/>\n\
+                         Resgate seu perfil enviando uma nova senha para o e-mail cadastrado.<br/>\n\
+                         Caso não lembre do e-mail informado entre em contato com a comissão organizadora.');
+                    $('#spanEmail').html('<input type="hidden" id="txtEmail" name="txtEmail" value='+perfil.de_email+'></input>');
+                    $('#resgataSenhaCPF').show();
+                }else{ 
+                    $('#resgataSenhaCPFLabel').html('');
+                    $('#spanEmail').html('');
+                    $('#resgataSenhaCPF').hide();
+                }
+        });
+    }
+}
+
+function limpaSpanEmail(){
+    $('#spanEmail').html('');
+}
+
+function alternaCepZipcode(nacionalidade){
+    if(nacionalidade == undefined)
+        nacionalidade = 'Brasil';
+
+    if(nacionalidade == 'Brasil'){
+        $('#pCep').show();
+        $('#txtZipcode').val("");
+        $('#pZipcode').hide();
+    }else{
+        $('#pZipcode').show();
+        $('#txtCep').val("");
+        $('#pCep').hide();
+    }
+}
+
+/**
+ * Função para gerar captcha por ajax
+ * @returns {undefined}
+ */
+function geraCaptcha(user_lang){
+    var URL     = $("#BASE_URL").val();
+    var dados   = '';
+    
+    $.post(URL+'evt/participante/geraCaptchaAjax/', 
+        {user_lang: user_lang},
+        function(data) {                                
+            if(data.length > 0) {
+                dados = JSON.parse(data);               
+                $('#captcha_insc_part_evt').html(dados.captcha);
+            }else{ 
+                $('#captcha_insc_part_evt').html('Erro ao gerar captcha');
+            }
+    });
+
+}

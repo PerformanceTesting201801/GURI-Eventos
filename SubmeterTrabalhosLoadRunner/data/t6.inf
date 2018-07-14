@@ -1,0 +1,13 @@
+[t6]
+FileName1=t6_version.html
+URL1=https://app.tmetric.com/api/version
+Total=2
+ContentType=application/json
+SnapshotXmlFile=snapshot_6.xml
+RequestHeaderFile=t6_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t6_ResponseHeader.txt
+FileName2=t6_estilo_admin.css
+URL2=https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/estilo_admin.css
+[ProtocolInfo]
+ProtocolId=QTWeb

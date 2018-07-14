@@ -1,0 +1,41 @@
+/* 
+    Document   : estilo
+    Created on : 30/04/2010, 17:11:52
+    Author     : Daniel Michelon De Carli <daniel.de.carli@gmail.com>
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+.botao_menu {
+    width: 150px;
+    height: 100px;        
+    color: black;
+    padding: 5px;
+    float: left;
+    margin: 7px;    
+}
+
+#filtroEtapas{
+    padding: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #EFEFEF;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+}
+
+.maiusculo {
+    text-transform: uppercase;
+}
+
+.truncateString{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    max-width: 150px;
+    overflow: hidden;
+    padding-right: 15px;
+}

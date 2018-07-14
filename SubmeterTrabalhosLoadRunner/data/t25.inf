@@ -1,0 +1,13 @@
+[t25]
+FileName1=t25.html
+URL1=https://guriensino.unipampa.edu.br/guri/evt/participante/resultadoPesquisaOrientador/
+Total=2
+RequestHeaderFile=t25_RequestHeader.txt
+RequestBodyFile=t25_RequestBody.txt
+ResponseHeaderFile=t25_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_25.xml
+FileName2=t25_ok_16.png
+URL2=https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/ok_16.png
+[ProtocolInfo]
+ProtocolId=QTWeb

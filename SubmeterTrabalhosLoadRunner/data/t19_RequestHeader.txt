@@ -1,0 +1,14 @@
+POST /guri/evt/evento/buscarModalidadeAjax/ HTTP/1.1
+Host: guriensino.unipampa.edu.br
+Connection: keep-alive
+Content-Length: 17
+Accept: */*
+Origin: https://guriensino.unipampa.edu.br
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Referer: https://guriensino.unipampa.edu.br/guri/evt/participante/submeteTrabalho/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: PHPSESSID=qgk7j9fk31b37lsf7l56dpcuf3; erp-session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%222968271fcbfbdb073bcb998538922fce%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A11%3A%22177.6.17.84%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A115%3A%22Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F66.0.3359.139+Safari%2F537.36%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1531512503%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7Dc8075fc7b2415b05549e785499f354cb; erp.contrast=0
+
