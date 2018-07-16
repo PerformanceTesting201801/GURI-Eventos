@@ -1,0 +1,2 @@
+[Hosts]
+localhost=C:\Users\Mauricio Escobar\Documents\VuGen\Scripts\InscricaoEventoSubmissaoTrabalho\res\localhost_5.eve

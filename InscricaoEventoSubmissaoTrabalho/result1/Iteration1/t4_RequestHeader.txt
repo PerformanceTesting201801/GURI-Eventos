@@ -1,0 +1,13 @@
+POST /guri/ptl/sistema/isLogado HTTP/1.1
+Referer: https://guriensino.unipampa.edu.br/guri/evt/evento/selecionaPerfil/362
+X-Requested-With: XMLHttpRequest
+Origin: https://guriensino.unipampa.edu.br
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Accept: */*
+Connection: Keep-Alive
+Host: guriensino.unipampa.edu.br
+Cookie: PHPSESSID=pfv3n08n0ksoka7g835ktq3sb3; erp-session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%228045f4b0f8c1f20d7e7dec4e4d356814%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A10%3A%2210.2.14.69%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A115%3A%22Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F66.0.3359.139+Safari%2F537.36%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1531708171%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7D84fa311e890b1be82943ee00f87430c5
+Content-Length: 0
+

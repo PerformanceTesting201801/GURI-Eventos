@@ -1,0 +1,14 @@
+tinyMCE.init({
+        // General options
+        mode : "textareas",
+        theme : "advanced",
+        editor_selector: "mceEditor",
+        editor_deselector: "mceNoEditor",
+	setup: function(ed) {
+	    ed.onChange.add(
+	        function (ed, evt) {
+	            tinyMCE.triggerSave();   
+	        }
+	    )
+	}        
+});

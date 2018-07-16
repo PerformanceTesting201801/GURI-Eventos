@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Date: Sun, 15 Jul 2018 23:59:54 GMT
+Server: Apache/2.4.7 (Ubuntu) Phusion_Passenger/4.0.37 PHP/5.5.9-1ubuntu4.22 OpenSSL/1.0.1f
+X-Powered-By: PHP/5.5.9-1ubuntu4.22
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-cache, no-store, must-revalidate, private
+Pragma: no-cache
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Content-Length: 66
+Keep-Alive: timeout=5, max=65
+Connection: Keep-Alive
+Content-Type: text/html
+

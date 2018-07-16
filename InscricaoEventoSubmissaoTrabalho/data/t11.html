@@ -1,0 +1,981 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="pt-br" lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta name="robots" content="noindex" />
+        <link rel="icon" href="https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/favicon-guri16.png" type="image/png"/>
+        <!-- css global -->
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/estilo_menu.css' type="text/css" />
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/estilo_admin.css' type="text/css" />
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/tabs.css' type="text/css" />
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/dd.css' type="text/css" />
+        <link rel="stylesheet" href="https://guriensino.unipampa.edu.br/guri/public/js/jquery-ui-1.9.0/css/custom-theme/jquery-ui-1.8.18.custom.css" type="text/css" />
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/select2.min.css' type="text/css" />
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/nav_etapas.css' type="text/css" />
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/form_2018.css' type="text/css" />
+
+        <!-- css de cada modulo -->
+        
+        <!-- js global -->
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/jquery-ui-1.9.0/js/jquery-1.8.2.js"></script>
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/jquery-ui-1.9.0/js/jquery-ui-1.9.0.custom.min.js"></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/angular.min.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/jquery.price_format.1.0.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/jquery.maskedinput-1.3.1.min.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/jquery.upload-1.0.2.min.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/jquery.cookie.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/jquery.multifile.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/jquery.dd.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/acessivel.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/dialog_sessao.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/admin.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/validacoes.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/tabs.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/tabs.min.js'></script>
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/select2/js/select2.min.js"></script>
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/select2/js/i18n/pt-BR.js"></script>
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/jquery-i18n/jquery.i18n.min.js"></script>
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/jquery-i18n/dicionario.js"></script>
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/jquery-i18n/tradutor.js"></script>
+
+        <!-- js de cada modulo -->
+                                                    <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/application/modules/evt/views/public/js/cep.js"></script>
+                                            <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/application/modules/evt/views/public/js/participante.js"></script>
+                            <title>GURI - Participante - Novo</title>
+        <object>
+            <noscript>
+                <p class="avisoScript">
+                    AVISO: Este sistema requer que o JavaScript esteja habilitado para funcionar corretamente.<br/>
+                    Por favor, habilite o JavaScript do seu navegador e atualize a página.
+                </p>
+            </noscript>
+        </object>
+    </head>
+    <body>
+
+        <!-- secao de cabecalho/menu do sistema-->
+        
+
+<div class="reset">    
+    <div id="novo_tarja-topo"></div>
+    <div id="novo_topo">
+        
+    	<h1 id="novo_guri-marca">
+            <a href="https://guriensino.unipampa.edu.br/guri/" title="GURI">
+                <img id="novo_marca" src="https://guriensino.unipampa.edu.br/guri/public/themes/moder/imgs/logo_guri.png" alt="GURI"/>
+            </a>            
+        </h1>
+        
+    	<h2 id="novo_unipampa">
+            <a href="http://www.unipampa.edu.br" title="Acessar Portal da UNIPAMPA" target="_new" >
+                <img class="novo_marca-unipampa" src="https://guriensino.unipampa.edu.br/guri/public/themes/moder/imgs/marca.png" alt="Acessar Portal da UNIPAMPA"/>
+            </a>
+        </h2>   
+        
+        <div id="novo_menu-auxiliar">
+            
+            <div class="novo_login">
+                                    <a class="novo_botao-login" href="https://guriensino.unipampa.edu.br/guri/ptl/sistema/showLogin">
+                        <img src="https://guriensino.unipampa.edu.br/guri/public/themes/moder/imgs/login.png" alt="Login"
+                             style="vertical-align:-2px;" /> Login
+                    </a>
+                                
+            </div>
+
+            <div class="clear"></div>
+            <div id="novo_menu-acessibilidade">
+                <div class="novo_alterar-fonte">
+                    <a href="#" title="Diminuir Fonte" class="novo_amenos decreaseFont">A-</a>
+                    <a href="#" title="Fonte Normal" class="novo_a resetFont">A</a>
+                    <a href="#" title="Aumentar Fonte" class="novo_amais increaseFont">A+</a>
+                </div>  
+
+                <div class="novo_contraste">
+                    <a href="#" title="Alternar Contraste" class="novo_link-contraste setContrast" >
+                        <img src="https://guriensino.unipampa.edu.br/guri/public/themes/moder/imgs/contraste.png" 
+                             style="vertical-align:middle;" alt="Contraste"/> 
+                        <span class="novo_menu-sumir_palavra">Contraste</span></a>
+                </div>
+
+                <div class="novo_site-map">
+                    <a href="https://guriensino.unipampa.edu.br/guri/ptl/sistema/menuDeAcessibilidade" 
+                       class="novo_link-mapa" title="Mapa do Site">
+                        <img src="https://guriensino.unipampa.edu.br/guri/public/themes/moder/imgs/mapa-site.png" 
+                             style="vertical-align:middle;" alt="Mapa do Site" /> 
+                        <span class="novo_menu-sumir_palavra">Mapa do Site</span></a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+                    <div id="novo_menu">
+            
+                        <ul id="novo_menu-principal">
+                              
+                                  
+                    <li class="novo_menu">
+                        <a href="#" class="novo_link-menu" id="area_menu_1">ACADÊMICO &nbsp;&rsaquo;</a>
+                        <div id="div_area_menu_1" class="novo_submenu-quadro">
+                            <ul class="novo_submenu1">
+                                                                                                      
+                                                                                                                                                        
+                                        <li><a href="#" class="novo_link-submenu">PROCESSO SELETIVO</a></li>
+                                                                                                          
+                                                                                                                                                        
+                                        <li><a href="#" class="novo_link-submenu">EVENTOS</a></li>
+                                                                                                                                                                                                                                        </ul>
+                            <ul class="novo_abas-conteudo1">  
+                                                                     
+                                                                                                            <li class="novo_conteudo novo_aba-ativa">
+                                                                                                                                    <div class="novo_coluna-1">
+                                                    <ul class="novo_menu-opcoes">     
+                                                        <li>    
+                                                            <h3 class="novo_titulo-menus">
+                                                                <img src="https://guriensino.unipampa.edu.br/guri/application/modules/psa/views/public/imgs/icone_psa_16.png"
+                                                                     alt="Processo Seletivo "/>                                            
+                                                                    Processo Seletivo 
+                                                                                                                                
+                                                                <a href="javascript:abrirDialog('ptl/sistema/dialogAjuda/psa', 
+                                                                                                         'dialog_modal_padrao', '600', '250', 
+                                                                                                         'Ajuda')" 
+                                                                   title="Ajuda"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_vermelho.png'
+                                                                                   width="14" height="14"  border="0" alt="Ajuda" title="Ajuda" />
+                                                                </a>                                                                
+                                                            </h3>
+                                                        </li>
+                                               
+                                                                                                                                                                                                                                                            <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/psa/processos/" class="novo_link-opcoes">Nova Inscrição</a></li>                                                    
+                                                                                                                                                                                                                                                                                                                        <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/psa/acesso/areaDoCandidato/" class="novo_link-opcoes">Área do Candidato</a></li>                                                    
+                                                                                                                                                                                                                                                                                                                        <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/psa/inscricao/autenticar/" class="novo_link-opcoes">Autenticar Documento</a></li>                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+
+                                                    </ul>
+                                                </div>
+                                                                                
+                                                                                                                                    <div class="novo_coluna-1">
+                                                    <ul class="novo_menu-opcoes">     
+                                                        <li>    
+                                                            <h3 class="novo_titulo-menus">
+                                                                <img src="https://guriensino.unipampa.edu.br/guri/application/modules/pss/views/public/imgs/icone_psa_16.png"
+                                                                     alt="SISU "/>                                            
+                                                                    SISU 
+                                                                                                                                
+                                                                <a href="javascript:abrirDialog('ptl/sistema/dialogAjuda/pss', 
+                                                                                                         'dialog_modal_padrao', '600', '250', 
+                                                                                                         'Ajuda')" 
+                                                                   title="Ajuda"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_vermelho.png'
+                                                                                   width="14" height="14"  border="0" alt="Ajuda" title="Ajuda" />
+                                                                </a>                                                                
+                                                            </h3>
+                                                        </li>
+                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/pss/publico/loginCandidatoMatCondicional/" class="novo_link-opcoes">Matrícula Condicional</a></li>                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+
+                                                    </ul>
+                                                </div>
+                                                                                
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                            </li>                                             
+                                     
+                                                                                                            <li class="novo_conteudo ">
+                                                                                                                        
+                                                                                                                        
+                                                                                                                                    <div class="novo_coluna-1">
+                                                    <ul class="novo_menu-opcoes">     
+                                                        <li>    
+                                                            <h3 class="novo_titulo-menus">
+                                                                <img src="https://guriensino.unipampa.edu.br/guri/application/modules/evt/views/public/imgs/meeting_16.png"
+                                                                     alt="Eventos Institucionais "/>                                            
+                                                                    Eventos Institucionais 
+                                                                                                                                
+                                                                <a href="javascript:abrirDialog('ptl/sistema/dialogAjuda/evt', 
+                                                                                                         'dialog_modal_padrao', '600', '250', 
+                                                                                                         'Ajuda')" 
+                                                                   title="Ajuda"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_vermelho.png'
+                                                                                   width="14" height="14"  border="0" alt="Ajuda" title="Ajuda" />
+                                                                </a>                                                                
+                                                            </h3>
+                                                        </li>
+                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/evt/evento/listarEdicoesAtivas/" class="novo_link-opcoes">Inscrição em Eventos</a></li>                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+
+                                                    </ul>
+                                                </div>
+                                                                                
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                            </li>                                             
+                                                                     
+                            </ul>                                              
+                            
+                        </div>
+                    </li>    
+                                              
+                                  
+                    <li class="novo_menu">
+                        <a href="#" class="novo_link-menu" id="area_menu_2">SISTEMA &nbsp;&rsaquo;</a>
+                        <div id="div_area_menu_2" class="novo_submenu-quadro">
+                            <ul class="novo_submenu2">
+                                                                                                                                                                                                                                              
+                                                                                                                                                        
+                                        <li><a href="#" class="novo_link-submenu">RELATÓRIOS</a></li>
+                                                                                                          
+                                                                                                                                                        
+                                        <li><a href="#" class="novo_link-submenu">SISTEMA</a></li>
+                                                                                                </ul>
+                            <ul class="novo_abas-conteudo2">  
+                                                                     
+                                                                                                            <li class="novo_conteudo novo_aba-ativa">
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                                    <div class="novo_coluna-1">
+                                                    <ul class="novo_menu-opcoes">     
+                                                        <li>    
+                                                            <h3 class="novo_titulo-menus">
+                                                                <img src="https://guriensino.unipampa.edu.br/guri/application/modules/rpt/views/public/imgs/report_16.png"
+                                                                     alt="Relatórios "/>                                            
+                                                                    Relatórios 
+                                                                                                                                
+                                                                <a href="javascript:abrirDialog('ptl/sistema/dialogAjuda/rpt', 
+                                                                                                         'dialog_modal_padrao', '600', '250', 
+                                                                                                         'Ajuda')" 
+                                                                   title="Ajuda"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_vermelho.png'
+                                                                                   width="14" height="14"  border="0" alt="Ajuda" title="Ajuda" />
+                                                                </a>                                                                
+                                                            </h3>
+                                                        </li>
+                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/rpt/relatorios/dadosAbertos/" class="novo_link-opcoes">Dados Abertos</a></li>                                                    
+                                                                                                                                                                                                                                                                                                                                                             
+
+                                                    </ul>
+                                                </div>
+                                                                                
+                                                                                                                        
+                                                                                                                        
+                                                                            </li>                                             
+                                     
+                                                                                                            <li class="novo_conteudo ">
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                                    <div class="novo_coluna-1">
+                                                    <ul class="novo_menu-opcoes">     
+                                                        <li>    
+                                                            <h3 class="novo_titulo-menus">
+                                                                <img src="https://guriensino.unipampa.edu.br/guri/application/modules/ptl/views/public/imgs/cubos_16.png"
+                                                                     alt="Portal "/>                                            
+                                                                    Portal 
+                                                                                                                                
+                                                                <a href="javascript:abrirDialog('ptl/sistema/dialogAjuda/ptl', 
+                                                                                                         'dialog_modal_padrao', '600', '250', 
+                                                                                                         'Ajuda')" 
+                                                                   title="Ajuda"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_vermelho.png'
+                                                                                   width="14" height="14"  border="0" alt="Ajuda" title="Ajuda" />
+                                                                </a>                                                                
+                                                            </h3>
+                                                        </li>
+                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/ptl/sistema/principal/" class="novo_link-opcoes">Início</a></li>                                                    
+                                                                                                                                                                                                                                         
+
+                                                    </ul>
+                                                </div>
+                                                                                
+                                                                                                                                    <div class="novo_coluna-1">
+                                                    <ul class="novo_menu-opcoes">     
+                                                        <li>    
+                                                            <h3 class="novo_titulo-menus">
+                                                                <img src="https://guriensino.unipampa.edu.br/guri/application/modules/man/views/public/imgs/help_verde.png"
+                                                                     alt="Repositório de Manuais "/>                                            
+                                                                    Repositório de Manuais 
+                                                                                                                                
+                                                                <a href="javascript:abrirDialog('ptl/sistema/dialogAjuda/man', 
+                                                                                                         'dialog_modal_padrao', '600', '250', 
+                                                                                                         'Ajuda')" 
+                                                                   title="Ajuda"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_vermelho.png'
+                                                                                   width="14" height="14"  border="0" alt="Ajuda" title="Ajuda" />
+                                                                </a>                                                                
+                                                            </h3>
+                                                        </li>
+                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/man/publico/" class="novo_link-opcoes">Manuais de Usuário</a></li>                                                    
+                                                                                                                     
+
+                                                    </ul>
+                                                </div>
+                                                                                
+                                                                            </li>                                             
+                                                                     
+                            </ul>                                              
+                            
+                        </div>
+                    </li>    
+                                        </ul>                    
+            <div id="novo_busca">               
+                <p class="novo_fundo-busca">
+                    <input type="text"  name="txtPesquisaArvore" id="txtIdPesquisaArvore" 
+                           class="novo_text-busca"
+                           value="Pesquisar..."
+                           size="40" maxlength="80" title="Informe o nome do módulo ou item de menu a ser acessado" 
+                           onblur="this.value = 'Pesquisar...';" 
+                           onfocus="if (this.value == 'Pesquisar...') this.value = ''; limparArvorePesquisa()"/>
+
+
+                    <img id="loadingItens" class="loading" alt="Carregando" style="position:absolute; top: 15px; left: -13px;"
+                         src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/ajax-loader-branco.gif' />                            
+
+
+                    <input type="submit" value="" class="novo_botao-busca" />
+                </p>
+            </div>
+        </div>
+    </div>
+
+<div id="header_place" >
+    <span class="instrucao_campo">&nbsp; &raquo; <b>Área:</b> Acadêmico &raquo; <b>Subárea:</b> Eventos &raquo; <b>Módulo: </b>Eventos Institucionais &raquo; <b>Ação: </b>Participante - Novo</span>    
+</div>
+<div class="clear"></div>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        
+        $(".novo_submenu1 li").on("click", function() {
+            var index = $(this).index();
+            $(".novo_abas-conteudo1>li").removeClass('novo_aba-ativa');
+            $(".novo_abas-conteudo1>li").eq(index).addClass('novo_aba-ativa');
+        });
+
+        $(".novo_submenu2 li").on("click", function() {
+            var index = $(this).index();
+            $(".novo_abas-conteudo2>li").removeClass('novo_aba-ativa');
+            $(".novo_abas-conteudo2>li").eq(index).addClass('novo_aba-ativa');
+        });
+
+       $(".novo_submenu3 li").on("click", function() {
+            var index = $(this).index();
+            $(".novo_abas-conteudo3>li").removeClass('novo_aba-ativa');
+            $(".novo_abas-conteudo3>li").eq(index).addClass('novo_aba-ativa');
+        });
+
+        $('.novo_submenu1 li a').click(function(){
+            $('.novo_submenu1 li a').removeClass('novo_ativo');
+            $(this).addClass('novo_ativo');
+        });
+
+        $('.novo_submenu2 li a').click(function(){
+            $('.novo_submenu2 li a').removeClass('novo_ativo');
+            $(this).addClass('novo_ativo');
+        });
+
+        $('.novo_submenu3 li a').click(function(){
+            $('.novo_submenu3 li a').removeClass('novo_ativo');
+            $(this).addClass('novo_ativo');
+        });
+        
+        $('#area_menu_1').click(function() {
+            $(".novo_submenu1 li a").eq(0).trigger('click');                       
+        });  
+        
+        $('#area_menu_2').click(function() {
+            $(".novo_submenu2 li a").eq(0).trigger('click');
+        });
+        
+        $('#area_menu_3').click(function() {
+            $(".novo_submenu3 li a").eq(0).trigger('click');
+        });
+        
+        $('#area_menu_1').click(function() {
+            $('#div_area_menu_1').addClass('novo_submenu-quadro-click');
+            $('#div_area_menu_2').removeClass('novo_submenu-quadro-click');
+            $('#div_area_menu_3').removeClass('novo_submenu-quadro-click');              
+        });    
+
+        $('#area_menu_2').click(function() {
+            $('#div_area_menu_2').addClass('novo_submenu-quadro-click'); 
+            $('#div_area_menu_1').removeClass('novo_submenu-quadro-click');
+            $('#div_area_menu_3').removeClass('novo_submenu-quadro-click');            
+        });    
+        
+        $('#area_menu_3').click(function() { 
+            $('#div_area_menu_3').addClass('novo_submenu-quadro-click');           
+            $('#div_area_menu_1').removeClass('novo_submenu-quadro-click');
+            $('#div_area_menu_2').removeClass('novo_submenu-quadro-click');            
+        }); 
+        
+        ocultarMenuPrincipal('.content');
+        ocultarMenuPrincipal('#novo_topo');
+        ocultarMenuPrincipal('#footer');
+        ocultarMenuPrincipal('.conteudo-central');
+    });
+    
+    function ocultarMenuPrincipal(alvo) {
+        $(alvo).on('mouseenter', function(){
+            $('#div_area_menu_1').removeClass('novo_submenu-quadro-click');
+            $('#div_area_menu_2').removeClass('novo_submenu-quadro-click');   
+            $('#div_area_menu_3').removeClass('novo_submenu-quadro-click');             
+        });          
+    }
+
+</script>  
+        <div class="conteudo-central">
+        <!-- secao de conteudo do sistema-->
+            <div class="content">
+                <input type="hidden" id="BASE_URL" value="https://guriensino.unipampa.edu.br/guri/"/>
+                <input type="hidden" id="TEMPO_SESSAO_TOTAL" value="14400"/>
+                <input type="hidden" id="USER_LANG" value="pt-BR" />
+                <div class="botoes_left">
+     <button onclick="redirecionar('https://guriensino.unipampa.edu.br/guri/evt/evento/listarEdicoesAtivas')" 
+        type="button" 
+        title="Voltar"
+        id="botao_voltar">
+    <img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/seta_voltar_32.png'
+         alt="Voltar"/>
+</button></div>
+<div class="clear"></div>
+<p class="aviso" i18n="">*Campos Obrigatórios</p>
+
+<div class="titulo_right" i18n="">Novo Participante</div>
+<fieldset  class="form_left">
+    
+    <legend i18n="">Novo Participante</legend>
+    
+    <p>
+        <label i18n="">Idioma do formulário:</label>
+        <input type="radio" id="bra" name="txtIdiomaForm[]" onchange="trocaIdioma(this.value);"
+               value="pt" >&nbsp;<label style="display: inline; float: none;" for="bra"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/idioma_bra_24.png'/></label>
+        <input type="radio" id="esp" name="txtIdiomaForm[]" onchange="trocaIdioma(this.value); "
+               value="es" >&nbsp;<label style="display: inline; float: none;" for="esp"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/idioma_esp_24.png'/></label>
+    </p>
+    
+            <p class="destaque_campo"
+           style="margin-left: 10px;">
+            <span i18n="">Possui usuário no Guri? Realize login para facilitar o cadastro</span>,
+            <a href="https://guriensino.unipampa.edu.br/guri/ptl/sistema/showLogin"><span i18n="">clicando aqui</span>.</a>
+        </p>
+        
+    <div class="form_left" id="frmOne">
+
+        <fieldset>
+            <legend i18n="">Identificação:</legend>
+            <input type="hidden" id="txtPerfil" name="txtPerfil" value="par" />
+            <input type="hidden" id="txtOperacao" name="txtOperacao" value="novo" />
+                        <p>
+                <label for="txtNome" i18n="">*Nome:</label>
+                <input type="text" name="txtNome"
+                       id="txtNome" value=""
+                       maxlength="100" size="50" />
+            </p>
+            <p>
+                <label for="txtSobrenome" i18n="">*Sobrenome:</label>
+                <input type="text" name="txtSobrenome"
+                       id="txtSobrenome" value=""
+                       maxlength="100" size="50" />
+            </p>
+            <p>
+                <label for="txtEmail" i18n="">*E-mail:</label>
+                <input type="text" name="txtEmail" id="txtEmail" class="email" value=""
+                       maxlength="255" size="30" onblur="pesquisaEmail(this.value)" onchange="limpaSpanEmail()" />
+                                    <button id="resgataSenhaEmail" name="resgataSenhaEmail"
+                            onclick="sendData('frmOne', 'evt/painel/enviarSenha/')" title="Esqueci a senha">
+                        <img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/seguranca_16.png' />
+                        Resgatar Senha
+                    </button>
+                    <br/>
+                    <!-- label de cadastro existente por email-->
+                    <span id="resgataSenhaEmailLabel" name="resgataSenhaEmailLabel">
+                    </span>
+                
+            </p>
+            <p>
+                <label for="txtEmail2" i18n="">*Confirmar E-mail:</label>
+                <input type="text" name="txtEmail2" id="txtEmail2" class="email" value=""
+                       maxlength="255" size="30" onpaste="return false;"/>
+            </p>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend>Documentos:</legend>
+            <p><span class="instrucao_campo" i18n="">
+                    Informe os documentos abaixo, conforme sua nacionalidade.
+                </span></p>
+            <p>
+                <label for="txtNacionalidade" i18n="">Nacionalidade:</label>
+                <select id="txtNacionalidade" name="txtNacionalidade">
+                    <option value="B" i18n="" >Brasileiro</option>
+                    <option value="E" i18n="" >Estrangeiro</option>
+                </select>
+            </p>
+            <p>
+                <span class="instrucao_campo" i18n="">Digite apenas números</span><br />
+                <label for="txtRg" i18n="">Doc. Identidade/RNE:</label>
+                <input type="text" name="txtRg" id="txtRg" class="campo_inteiro" value=""
+                       maxlength="20" size="20"  />
+            </p>
+            <p>
+                                    <span class="instrucao_campo" i18n="">
+                        CPF é obrigatório caso participante seja brasileiro. Digite apenas números.
+                    </span>
+                    <br/>
+                                <label for="txtCpf">CPF:</label>
+                <input type="text" name="txtCpf" id="txtCpf" class="campo_cpf" value=""
+                       maxlength="11" size="14" onblur="pesquisaCPF(this.value)" />
+                                    <button id="resgataSenhaCPF" name="resgataSenhaCPF"
+                            onclick="sendData('frmOne', 'evt/painel/enviarSenha/')" title="Esqueci a senha">
+                        <img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/seguranca_16.png' />
+                        Resgatar Senha
+                    </button>
+                    <!-- label de cadastro existente por cpf -->
+                    <span id="resgataSenhaCPFLabel" name="resgataSenhaCPFLabel">
+                    </span>
+                
+                <!-- caso for cpf existente e intenção de resgate
+                        de senha js usa este span para sobrescrever
+                        o txtEmail mandando para o post o email existente -->
+                <span id="spanEmail" name="spanEmail">
+                </span>
+            </p>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend i18n="">Endereço:</legend>
+            <p>
+                <label for="txtPais" i18n="">*País:</label>
+                <select name="txtPais" id="txtPais" onchange="alternaCepZipcode(this.value)">
+                                                                                            <option  value="Brasil">Brasil</option>
+                                                                                            <option  value="Açores e Madeira">Açores e Madeira</option>
+                                                                                            <option  value="Afeganistão">Afeganistão</option>
+                                                                                            <option  value="Alaska">Alaska</option>
+                                                                                            <option  value="Albânia">Albânia</option>
+                                                                                            <option  value="Alemanha">Alemanha</option>
+                                                                                            <option  value="Andorra">Andorra</option>
+                                                                                            <option  value="Angola">Angola</option>
+                                                                                            <option  value="Anguilla">Anguilla</option>
+                                                                                            <option  value="Antartida">Antartida</option>
+                                                                                            <option  value="Antigua e Barbuda">Antigua e Barbuda</option>
+                                                                                            <option  value="Antilhas Holandesas">Antilhas Holandesas</option>
+                                                                                            <option  value="Arábia Saudita">Arábia Saudita</option>
+                                                                                            <option  value="Argentina">Argentina</option>
+                                                                                            <option  value="Argélia">Argélia</option>
+                                                                                            <option  value="Armênia">Armênia</option>
+                                                                                            <option  value="Aruba">Aruba</option>
+                                                                                            <option  value="Ascensão">Ascensão</option>
+                                                                                            <option  value="Austrália">Austrália</option>
+                                                                                            <option  value="Azerbaijão">Azerbaijão</option>
+                                                                                            <option  value="África do Sul">África do Sul</option>
+                                                                                            <option  value="Áustria">Áustria</option>
+                                                                                            <option  value="Bahamas">Bahamas</option>
+                                                                                            <option  value="Bangladesh">Bangladesh</option>
+                                                                                            <option  value="Barbados">Barbados</option>
+                                                                                            <option  value="Barein">Barein</option>
+                                                                                            <option  value="Belarus">Belarus</option>
+                                                                                            <option  value="Belize">Belize</option>
+                                                                                            <option  value="Benin">Benin</option>
+                                                                                            <option  value="Bermudas">Bermudas</option>
+                                                                                            <option  value="Bélgica">Bélgica</option>
+                                                                                            <option  value="Bolívia">Bolívia</option>
+                                                                                            <option  value="Bosnia-Herzegovina">Bosnia-Herzegovina</option>
+                                                                                            <option  value="Botsuana">Botsuana</option>
+                                                                                            <option  value="Brunei Darussalam">Brunei Darussalam</option>
+                                                                                            <option  value="Bulgária">Bulgária</option>
+                                                                                            <option  value="Burkina Faso">Burkina Faso</option>
+                                                                                            <option  value="Burundi">Burundi</option>
+                                                                                            <option  value="Butão">Butão</option>
+                                                                                            <option  value="Cabo Verde">Cabo Verde</option>
+                                                                                            <option  value="Camarões">Camarões</option>
+                                                                                            <option  value="Camboja">Camboja</option>
+                                                                                            <option  value="Canadá">Canadá</option>
+                                                                                            <option  value="Canárias e Tenerife">Canárias e Tenerife</option>
+                                                                                            <option  value="Catar">Catar</option>
+                                                                                            <option  value="Cayman">Cayman</option>
+                                                                                            <option  value="Cazaquistão">Cazaquistão</option>
+                                                                                            <option  value="Centro Africana">Centro Africana</option>
+                                                                                            <option  value="Chade">Chade</option>
+                                                                                            <option  value="Chile">Chile</option>
+                                                                                            <option  value="China">China</option>
+                                                                                            <option  value="Chipre">Chipre</option>
+                                                                                            <option  value="Christmas">Christmas</option>
+                                                                                            <option  value="Cingapura">Cingapura</option>
+                                                                                            <option  value="Cocos">Cocos</option>
+                                                                                            <option  value="Colômbia">Colômbia</option>
+                                                                                            <option  value="Comores">Comores</option>
+                                                                                            <option  value="Congo (Rep. Dem.)">Congo (Rep. Dem.)</option>
+                                                                                            <option  value="Congo (Rep.)">Congo (Rep.)</option>
+                                                                                            <option  value="Cook">Cook</option>
+                                                                                            <option  value="Coréia">Coréia</option>
+                                                                                            <option  value="Coréia do Norte">Coréia do Norte</option>
+                                                                                            <option  value="Costa do Marfim">Costa do Marfim</option>
+                                                                                            <option  value="Costa Rica">Costa Rica</option>
+                                                                                            <option  value="Croacia">Croacia</option>
+                                                                                            <option  value="Cuba">Cuba</option>
+                                                                                            <option  value="Dinamarca">Dinamarca</option>
+                                                                                            <option  value="Djibuti">Djibuti</option>
+                                                                                            <option  value="Dominica">Dominica</option>
+                                                                                            <option  value="Egito">Egito</option>
+                                                                                            <option  value="El Salvador">El Salvador</option>
+                                                                                            <option  value="Emirados Árabes Unidos">Emirados Árabes Unidos</option>
+                                                                                            <option  value="Equador">Equador</option>
+                                                                                            <option  value="Eritréia">Eritréia</option>
+                                                                                            <option  value="Escócia">Escócia</option>
+                                                                                            <option  value="Eslovênia">Eslovênia</option>
+                                                                                            <option  value="Espanha">Espanha</option>
+                                                                                            <option  value="Estados Unidos">Estados Unidos</option>
+                                                                                            <option  value="Estônia">Estônia</option>
+                                                                                            <option  value="Etiopia">Etiopia</option>
+                                                                                            <option  value="Falkland">Falkland</option>
+                                                                                            <option  value="Faroe">Faroe</option>
+                                                                                            <option  value="Fiji">Fiji</option>
+                                                                                            <option  value="Filipinas">Filipinas</option>
+                                                                                            <option  value="Finlândia">Finlândia</option>
+                                                                                            <option  value="França">França</option>
+                                                                                            <option  value="Gabão">Gabão</option>
+                                                                                            <option  value="Gambia">Gambia</option>
+                                                                                            <option  value="Gana">Gana</option>
+                                                                                            <option  value="Georgia">Georgia</option>
+                                                                                            <option  value="Georgia e Sandwich do Sul">Georgia e Sandwich do Sul</option>
+                                                                                            <option  value="Gibraltar">Gibraltar</option>
+                                                                                            <option  value="Granada">Granada</option>
+                                                                                            <option  value="Grã-Bretanha">Grã-Bretanha</option>
+                                                                                            <option  value="Grécia">Grécia</option>
+                                                                                            <option  value="Groenlandia">Groenlandia</option>
+                                                                                            <option  value="Guadalupe">Guadalupe</option>
+                                                                                            <option  value="Guam">Guam</option>
+                                                                                            <option  value="Guantanamo">Guantanamo</option>
+                                                                                            <option  value="Guatemala">Guatemala</option>
+                                                                                            <option  value="Guernesey">Guernesey</option>
+                                                                                            <option  value="Guiana">Guiana</option>
+                                                                                            <option  value="Guiana Francesa">Guiana Francesa</option>
+                                                                                            <option  value="Guiné">Guiné</option>
+                                                                                            <option  value="Guiné Bissau">Guiné Bissau</option>
+                                                                                            <option  value="Guiné Equatorial">Guiné Equatorial</option>
+                                                                                            <option  value="Haiti">Haiti</option>
+                                                                                            <option  value="Havai">Havai</option>
+                                                                                            <option  value="Holanda">Holanda</option>
+                                                                                            <option  value="Honduras">Honduras</option>
+                                                                                            <option  value="Hong Kong">Hong Kong</option>
+                                                                                            <option  value="Hungria">Hungria</option>
+                                                                                            <option  value="Iemen">Iemen</option>
+                                                                                            <option  value="Ilhas Menores da França">Ilhas Menores da França</option>
+                                                                                            <option  value="Indía">Indía</option>
+                                                                                            <option  value="Indonésia">Indonésia</option>
+                                                                                            <option  value="Inglaterra">Inglaterra</option>
+                                                                                            <option  value="Iraque">Iraque</option>
+                                                                                            <option  value="Irã">Irã</option>
+                                                                                            <option  value="Irlanda">Irlanda</option>
+                                                                                            <option  value="Islandia">Islandia</option>
+                                                                                            <option  value="Israel">Israel</option>
+                                                                                            <option  value="Itália">Itália</option>
+                                                                                            <option  value="Jamaica">Jamaica</option>
+                                                                                            <option  value="Japão">Japão</option>
+                                                                                            <option  value="Jersey">Jersey</option>
+                                                                                            <option  value="Johnston">Johnston</option>
+                                                                                            <option  value="Jordania">Jordania</option>
+                                                                                            <option  value="Kiribati">Kiribati</option>
+                                                                                            <option  value="Kosovo">Kosovo</option>
+                                                                                            <option  value="Kuwait">Kuwait</option>
+                                                                                            <option  value="Laos">Laos</option>
+                                                                                            <option  value="Lesoto">Lesoto</option>
+                                                                                            <option  value="Letonia">Letonia</option>
+                                                                                            <option  value="Libéria">Libéria</option>
+                                                                                            <option  value="Liechtenstein">Liechtenstein</option>
+                                                                                            <option  value="Lituânia">Lituânia</option>
+                                                                                            <option  value="Líbano">Líbano</option>
+                                                                                            <option  value="Líbia">Líbia</option>
+                                                                                            <option  value="Luxemburgo">Luxemburgo</option>
+                                                                                            <option  value="Macau">Macau</option>
+                                                                                            <option  value="Macedônia">Macedônia</option>
+                                                                                            <option  value="Madagascar">Madagascar</option>
+                                                                                            <option  value="Malavi">Malavi</option>
+                                                                                            <option  value="Malásia">Malásia</option>
+                                                                                            <option  value="Maldivas">Maldivas</option>
+                                                                                            <option  value="Mali">Mali</option>
+                                                                                            <option  value="Malta">Malta</option>
+                                                                                            <option  value="Man">Man</option>
+                                                                                            <option  value="Marianas">Marianas</option>
+                                                                                            <option  value="Marrocos">Marrocos</option>
+                                                                                            <option  value="Marshall">Marshall</option>
+                                                                                            <option  value="Martinica">Martinica</option>
+                                                                                            <option  value="Mauricio">Mauricio</option>
+                                                                                            <option  value="Mauritania">Mauritania</option>
+                                                                                            <option  value="Mayotte">Mayotte</option>
+                                                                                            <option  value="México">México</option>
+                                                                                            <option  value="Mianmar">Mianmar</option>
+                                                                                            <option  value="Micronesia">Micronesia</option>
+                                                                                            <option  value="Midway">Midway</option>
+                                                                                            <option  value="Moçambique">Moçambique</option>
+                                                                                            <option  value="Moldavia">Moldavia</option>
+                                                                                            <option  value="Mongólia">Mongólia</option>
+                                                                                            <option  value="Montserrat">Montserrat</option>
+                                                                                            <option  value="Mônaco">Mônaco</option>
+                                                                                            <option  value="Namibia">Namibia</option>
+                                                                                            <option  value="Nauru">Nauru</option>
+                                                                                            <option  value="Nepal">Nepal</option>
+                                                                                            <option  value="Nicaraguá">Nicaraguá</option>
+                                                                                            <option  value="Niger">Niger</option>
+                                                                                            <option  value="Nigéria">Nigéria</option>
+                                                                                            <option  value="Niue">Niue</option>
+                                                                                            <option  value="Norfolk">Norfolk</option>
+                                                                                            <option  value="Noruega">Noruega</option>
+                                                                                            <option  value="Nova Caledônia">Nova Caledônia</option>
+                                                                                            <option  value="Nova Zelândia">Nova Zelândia</option>
+                                                                                            <option  value="Oma">Oma</option>
+                                                                                            <option  value="Países Baixos">Países Baixos</option>
+                                                                                            <option  value="Palau">Palau</option>
+                                                                                            <option  value="Palestina">Palestina</option>
+                                                                                            <option  value="Panamá">Panamá</option>
+                                                                                            <option  value="Papua-Nova Guiné">Papua-Nova Guiné</option>
+                                                                                            <option  value="Paquistão">Paquistão</option>
+                                                                                            <option  value="Paraguai">Paraguai</option>
+                                                                                            <option  value="Peru">Peru</option>
+                                                                                            <option  value="Pitcairn">Pitcairn</option>
+                                                                                            <option  value="Polinésia Francesa">Polinésia Francesa</option>
+                                                                                            <option  value="Polônia">Polônia</option>
+                                                                                            <option  value="Porto Rico">Porto Rico</option>
+                                                                                            <option  value="Portugal">Portugal</option>
+                                                                                            <option  value="Quênia">Quênia</option>
+                                                                                            <option  value="Quirguistão">Quirguistão</option>
+                                                                                            <option  value="Republica Eslovaca/Eslováquia">Republica Eslovaca/Eslováquia</option>
+                                                                                            <option  value="República Dominicana">República Dominicana</option>
+                                                                                            <option  value="República Tcheca">República Tcheca</option>
+                                                                                            <option  value="Reunião">Reunião</option>
+                                                                                            <option  value="Romênia">Romênia</option>
+                                                                                            <option  value="Ruanda">Ruanda</option>
+                                                                                            <option  value="Rússia">Rússia</option>
+                                                                                            <option  value="Saara Ocidental">Saara Ocidental</option>
+                                                                                            <option  value="Saint Pierre e Miquelon">Saint Pierre e Miquelon</option>
+                                                                                            <option  value="Salomão">Salomão</option>
+                                                                                            <option  value="Samoa">Samoa</option>
+                                                                                            <option  value="Samoa Americana">Samoa Americana</option>
+                                                                                            <option  value="San Marino">San Marino</option>
+                                                                                            <option  value="Santa Helena">Santa Helena</option>
+                                                                                            <option  value="Santa Lúcia">Santa Lúcia</option>
+                                                                                            <option  value="São Cristóvão e Nevis">São Cristóvão e Nevis</option>
+                                                                                            <option  value="São Tomé e Príncipe">São Tomé e Príncipe</option>
+                                                                                            <option  value="São Vicente e Granadinas">São Vicente e Granadinas</option>
+                                                                                            <option  value="Senegal">Senegal</option>
+                                                                                            <option  value="Serra Leoa">Serra Leoa</option>
+                                                                                            <option  value="Servia e Montenegro">Servia e Montenegro</option>
+                                                                                            <option  value="Seychelles">Seychelles</option>
+                                                                                            <option  value="Siria">Siria</option>
+                                                                                            <option  value="Somalia">Somalia</option>
+                                                                                            <option  value="Sri Lanka">Sri Lanka</option>
+                                                                                            <option  value="Suazilandia">Suazilandia</option>
+                                                                                            <option  value="Sudão">Sudão</option>
+                                                                                            <option  value="Suécia">Suécia</option>
+                                                                                            <option  value="Suíça">Suíça</option>
+                                                                                            <option  value="Suriname">Suriname</option>
+                                                                                            <option  value="Tadjiquistão">Tadjiquistão</option>
+                                                                                            <option  value="Tailândia">Tailândia</option>
+                                                                                            <option  value="Taiwan">Taiwan</option>
+                                                                                            <option  value="Tanzânia">Tanzânia</option>
+                                                                                            <option  value="Ter Austrais e Ant.da França">Ter Austrais e Ant.da França</option>
+                                                                                            <option  value="Ter.Britânico da Antartida">Ter.Britânico da Antartida</option>
+                                                                                            <option  value="Ter.Britânico Oceani Indico">Ter.Britânico Oceani Indico</option>
+                                                                                            <option  value="Ter.Francês Sul e Antártida">Ter.Francês Sul e Antártida</option>
+                                                                                            <option  value="Timor Oriental">Timor Oriental</option>
+                                                                                            <option  value="Togo">Togo</option>
+                                                                                            <option  value="Tonga">Tonga</option>
+                                                                                            <option  value="Toquelau">Toquelau</option>
+                                                                                            <option  value="Transkei">Transkei</option>
+                                                                                            <option  value="Trinidade e Tobago">Trinidade e Tobago</option>
+                                                                                            <option  value="Tristão da Cunha">Tristão da Cunha</option>
+                                                                                            <option  value="Tunísia">Tunísia</option>
+                                                                                            <option  value="Turcks e Caicos">Turcks e Caicos</option>
+                                                                                            <option  value="Turcomenistão">Turcomenistão</option>
+                                                                                            <option  value="Turquia">Turquia</option>
+                                                                                            <option  value="Tuvalu">Tuvalu</option>
+                                                                                            <option  value="Ucrânia">Ucrânia</option>
+                                                                                            <option  value="Uganda">Uganda</option>
+                                                                                            <option  value="Uruguai">Uruguai</option>
+                                                                                            <option  value="Uzbequistão">Uzbequistão</option>
+                                                                                            <option  value="Vanuatu">Vanuatu</option>
+                                                                                            <option  value="Vaticano">Vaticano</option>
+                                                                                            <option  value="Venezuela">Venezuela</option>
+                                                                                            <option  value="Vietnã">Vietnã</option>
+                                                                                            <option  value="Virgens Americanas">Virgens Americanas</option>
+                                                                                            <option  value="Virgens Britânicas">Virgens Britânicas</option>
+                                                                                            <option  value="Wake">Wake</option>
+                                                                                            <option  value="Wallis e Futuna">Wallis e Futuna</option>
+                                                                                            <option  value="Zambia">Zambia</option>
+                                                                                            <option  value="Zimbabue">Zimbabue</option>
+                                    </select>
+            </p>
+            <p id="pCep">
+                <label for="txtCep">*CEP:</label>
+                <input type="text" name="txtCep" value=""
+                       id="txtCep" maxlength="9" size="10" class="campo_cep" onblur="buscaCep(this.value)"/>
+            </p>
+            <p id="pZipcode">
+                <label for="txtZipcode">*Zipcode:</label>
+                <input type="text" name="txtZipcode" value=""
+                       id="txtZipcode" maxlength="9" size="10"/>
+            </p>
+            <p>
+                <label for="txtEndereco" i18n="">*Endereço:</label>
+                <input type="text" name="txtEndereco" id="txtEndereco" value=""
+                       maxlength="255" size="40" />
+            </p>
+            <p>
+                <label for="txtBairro" i18n="">Bairro:</label>
+                <input type="text" name="txtBairro" id="txtBairro"value=""
+                       maxlength="30" size="30" />
+            </p>
+            <p>
+                <label for="txtCidade" i18n="">*Cidade:</label>
+                <input type="text" name="txtCidade" id="txtCidade" value=""
+                       maxlength="60" size="30" />
+            </p>
+            <p>
+                <label for='txtUF' i18n="">Estado:</label>
+                <select name="txtUF" id="txtUF">
+                    <option value="" i18n="">Selecione um Estado</option>
+                                                                    <option  value="RS">Rio Grande do Sul</option>
+                                                                    <option  value="AC">Acre</option>
+                                                                    <option  value="AL">Alagoas</option>
+                                                                    <option  value="AP">Amapá</option>
+                                                                    <option  value="AM">Amazonas</option>
+                                                                    <option  value="BA">Bahia</option>
+                                                                    <option  value="CE">Ceará</option>
+                                                                    <option  value="DF">Distrito Federal</option>
+                                                                    <option  value="ES">Espírito Santo</option>
+                                                                    <option  value="**">Estados de Angola</option>
+                                                                    <option  value="GO">Goiás</option>
+                                                                    <option  value="MA">Maranhão</option>
+                                                                    <option  value="MT">Mato Grosso</option>
+                                                                    <option  value="MS">Mato Grosso do Sul</option>
+                                                                    <option  value="MG">Minas Gerais</option>
+                                                                    <option  value="PB">Paraíba</option>
+                                                                    <option  value="PR">Paraná</option>
+                                                                    <option  value="PA">Pará</option>
+                                                                    <option  value="PE">Pernambuco</option>
+                                                                    <option  value="PI">Piauí</option>
+                                                                    <option  value="RJ">Rio de Janeiro</option>
+                                                                    <option  value="RN">Rio Grande do Norte</option>
+                                                                    <option  value="RO">Rondônia</option>
+                                                                    <option  value="RR">Roraima</option>
+                                                                    <option  value="SC">Santa Catarina</option>
+                                                                    <option  value="SP">São Paulo</option>
+                                                                    <option  value="SE">Sergipe</option>
+                                                                    <option  value="TO">Tocantins</option>
+                                    </select>
+            </p>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend i18n="">Definição de Senha:</legend>
+        <p>
+                        <label for="txtSenha1" i18n="">*Senha:</label>
+            <input type="password" name="txtSenha1" id="txtSenha1"
+                   maxlength="200" size="20" />
+                           </p>
+        <p>
+            <label for="txtSenha2" i18n="">*Confirmar senha:</label>
+            <input type="password" name="txtSenha2" id="txtSenha2" onpaste="return false;"
+                   maxlength="200" size="20" />
+            <span class="instrucao_campo" i18n="">Digite novamente a senha</span>
+        </p>
+        </fieldset>
+        <br/>
+
+                <fieldset>
+            <legend i18n="">Regulamento do evento</legend>
+            <p>
+                <input type="checkbox" name="txtNormas" id="txtNormas" />
+                <span i18n="">
+                    Declaro que tomei conhecimento e concordo plenamente com o
+                </span>
+                                    <a href="javascript:abrirDialog('evt/participante/exibeRegulamento/362',
+                       'dialog_modal_padrao', '600', '600',
+                       'Regulamento')" title='Regulamento'><b i18n="">
+                            regulamento do evento
+                        </b>.</a>
+                            </p>
+        </fieldset>
+                <br/>
+        
+        <p>
+            <input type="hidden" name="acao_avancar" id="acao_avancar" value="evt/participante/novoInscricaoEvento" />
+        </p>
+        <div class="form_right"> <button type="button" 
+        onclick="sendData('frmOne', 'evt/participante/salvar')"
+        title="Salvar"
+        id="botao_salvar">
+    <img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/salvar_32.png'
+         id="imagem_botao_salvar"
+         alt="Salvar"/>
+</button> <button onclick="redirecionar('https://guriensino.unipampa.edu.br/guri/evt/evento/listarEdicoesAtivas')"
+        type="button" 
+        title="Cancelar"
+        id="botao_cancelar">
+    <img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/cancel_32.png'
+         alt="Cancelar"/>
+</button>   </div>
+    </div>
+</fieldset>
+<div class="clear"></div>
+            </div>
+
+            <div id="carregando">
+                <br/><br/><br/><br/><br/><br/><br/>
+                <br/><br/><br/><br/><br/><br/>
+                <div id="carregando_text">
+                    <div id="carregando_mensagem">Enviando! </div><br/>
+                    <img src="https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/ajax-loader-big.gif"  alt="Enviando..." />
+                </div>
+            </div>
+
+        </div>
+        <!-- secao de rodape do sistema-->
+        
+<div id="footer">
+    
+            Conexão: <span class='textRed'> 
+                    <b>Testes</b>
+                  </span>
+        <br/><br/>
+        
+    
+    <a href="javascript:abrirDialog('ptl/sistema/centralDeAjuda', 
+                                        'dialog_modal_padrao', '500', '540', 
+                                        'Central de Ajuda',
+                                        '', 
+                                        'dialog_modal_padrao')" >
+    <img src="https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_verde.png" 
+         alt="Central de Ajuda"/>
+        Central de Ajuda</a>   <br/><br/>
+    Desenvolvido: 
+    <a href="http://www.dtic.unipampa.edu.br" target="_new">DTIC</a> - 
+    <a href="http://www.unipampa.edu.br" target="_new">Universidade Federal do Pampa</a> <br/>
+    
+    
+     <p class="center">
+        <a href="http://validator.w3.org/check?uri=referer" target="_new">
+            <img src="https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/valid-xhtml10-blue.png" alt="Valid XHTML 1.0 Transitional" height="23" width="66" />
+        </a>         
+     </p>
+     
+ </div>        <!-- div para mensagens de validacao-->
+        <div id="dialog_validacao" title="Validação"></div>
+
+        <!-- dialog padrao para mensagens -->
+        <div id="dialog_modal_padrao"></div>
+
+        <!-- div para confirmacao de renovação de sessão-->
+        <div id="dialog_sessao" title="Renovar Sessão">
+            Sua sessão expira em <b><span id="div_tempo_sessao_dialog"></span></b> segundos
+        </div>
+
+        <!-- div para confirmacao de operacoes -->
+        <div id="dialog_confirmacao" title="Confirmação"></div>
+            </body>
+</html>

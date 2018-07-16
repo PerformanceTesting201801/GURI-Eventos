@@ -1,0 +1,93 @@
+$(document).ready(function() {    
+    $('#senha').keypress(function(event) {
+        if (event.keyCode == '13') {
+            $('#entrar').click();
+            event.preventDefault();
+        }
+    });
+    
+    $('#dialog_ok1').dialog({
+        autoOpen: false,
+        width: 770,
+        modal: true,
+        show: "drop",
+        hide: "fade",
+        buttons: {
+            "Ok": function() { 
+                $(this).dialog("close"); 
+            }
+        }
+    });
+        
+    $('#dialog_ok_link1').click(function(){
+        $('#dialog_ok1').dialog("open");
+        return false;
+    });            
+    
+});    
+
+function enviar() {
+    var login     = $("#login").val();
+    var senha     = $("#senha").val();
+    var captcha   = $("#captcha").val();
+    var fromURL   = $("#BASE_URL").val() + "ptl/sistema/login";
+    
+    $("#carregando").fadeIn();
+    
+    $.ajax({
+        type:"post",
+        url: fromURL,
+        data: {
+                 "login": login, 
+                 "senha": senha,
+                 "captcha": captcha
+              },
+           timeout: 20000,
+           success: function(data) {
+                        //se foi enviado endereco para redirecionamento o login foi realizado com sucesso
+                        var ind = data.indexOf("Location:");
+                        if(ind == 0) {
+                            var url = data.replace("Location:","");
+                            $(location).attr('href', url);                                 
+                        } else { //caso nao foi enviado endereco, mostra-se a mensagem de erro de login        
+                            $("#dialog_ok1").html(data);
+                            $("#dialog_ok1").dialog("open").parent().addClass("ui-state-error");
+                            $("#carregando").fadeOut();           
+                        }       
+                    },
+           error: function(jqXHR, textStatus, errorThrown){               
+                    if (textStatus==="timeout") {
+                        var linkVolta = $("#BASE_URL").val()+"ptl/sistema/logout";
+                        $("#dialog_ok1").html("Ocorreu um problema na comunicação com o serviço de autenticação. <br/><br/><a href='"+linkVolta+"'>Clique aqui para tentar novamente.</a>");
+                        $("#dialog_ok1").dialog("open").parent().addClass("ui-state-error");
+                        $("#carregando").fadeOut();                                                
+                    }
+                }
+    });
+}
+
+/*
+* Direciona para a tela especifica de login do modulo 
+*/
+function direcionaLogin(siglaModulo) {
+    var baseUrl = $("#BASE_URL").val();
+    if(siglaModulo == 'PSA') {
+        redirecionar(baseUrl + 'psa/acesso/abrirJanelaLogin');
+    }
+    if(siglaModulo == 'EVT') {
+        redirecionar(baseUrl + 'evt/evento/listarEdicoesAtivas');
+    }
+    if(siglaModulo == 'OUV') {
+        redirecionar(baseUrl + 'ouv/solicitantes/autenticar');
+    }    
+
+}
+
+/**
+ * 
+ * @param   string  conexao - <D>esenvolvimento, <T>estes, <H>omologação ou <R>éplica
+ */
+function alterarConexao(conexao) {
+    var baseUrl = $("#BASE_URL").val();    
+    redirecionar(baseUrl + 'ptl/sistema/alterarConexao/'+conexao);
+}

@@ -1,0 +1,14 @@
+POST /guri/evt/participante/resultadoPesquisaOrientador/ HTTP/1.1
+Host: guriensino.unipampa.edu.br
+Connection: keep-alive
+Content-Length: 11
+Accept: */*
+Origin: https://guriensino.unipampa.edu.br
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Referer: https://guriensino.unipampa.edu.br/guri/evt/participante/submeteTrabalho/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: PHPSESSID=4uebu59f23mbu1h8ic63prl8n3; erp-session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%226e924e41ab5d8530243141ec3ba7f091%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A10%3A%2210.2.14.69%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A115%3A%22Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F66.0.3359.139+Safari%2F537.36%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1531699417%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7D2841ca472fbb14ccb0e8fc4c095c36ae; erp.contrast=0
+

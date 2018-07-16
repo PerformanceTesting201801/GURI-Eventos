@@ -1,0 +1,13 @@
+[t34]
+FileName1=t34.html
+URL1=https://guriensino.unipampa.edu.br/guri/evt/participante/testeInternoAjax/
+Total=2
+RequestHeaderFile=t34_RequestHeader.txt
+RequestBodyFile=t34_RequestBody.txt
+ResponseHeaderFile=t34_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_34.xml
+FileName2=t34_ui-bg_highlight-hard_100_eeeeee_1x100.png
+URL2=https://guriensino.unipampa.edu.br/guri/public/js/jquery-ui-1.9.0/css/custom-theme/images/ui-bg_highlight-hard_100_eeeeee_1x100.png
+[ProtocolInfo]
+ProtocolId=QTWeb

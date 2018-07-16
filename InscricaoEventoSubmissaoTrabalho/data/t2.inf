@@ -1,0 +1,8 @@
+[t2]
+FileName1=t2_seed.html
+URL1=https://clientservices.googleapis.com/chrome-variations/seed?osname=win&channel=stable&milestone=66
+Total=2
+ContentType=text/css
+SnapshotXmlFile=snapshot_2.xml
+FileName2=t2_estilo_menu.css
+URL2=https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/estilo_menu.css

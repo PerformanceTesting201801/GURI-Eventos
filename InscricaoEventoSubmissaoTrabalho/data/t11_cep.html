@@ -1,0 +1,22 @@
+function buscaCep(cep) {            
+    var loading = "#loading_cep";
+    var URL = $("#BASE_URL").val();
+        
+    $(loading).show();
+
+    $.post(URL+'evt/participante/buscaCepAjax/', 
+    {cep: cep},
+        function(data) {
+            $(loading).hide();     
+            
+            if(data.existe === true) {                
+                $("#txtEndereco").val(data.rua);
+                $("#txtBairro").val(data.bairro);
+                $("#txtCidade").val(data.cidade);
+                $("#txtUF").val(data.estado);
+                $("#txtPais").val('Brasil');
+            } else {
+                $(loading).hide();            
+            }
+        }, "json");
+}

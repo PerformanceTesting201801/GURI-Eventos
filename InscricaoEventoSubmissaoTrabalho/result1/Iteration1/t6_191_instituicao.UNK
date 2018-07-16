@@ -1,0 +1,21 @@
+/** 
+ * função para o autocomplete da area de conhecimento
+ */    
+$(document).ready(function() { 
+    //input de autocomplete para o nome da area de conhecimento   
+    $("#txtNomeInstituicao").autocomplete({        
+       source: $("#BASE_URL").val()+'evt/instituicao/getInstituicaoAjax/',
+        minLength: 2,  
+        select: function(event, ui) {
+            $('#txtNomeInstituicao').val(ui.item.value);
+            $('#txtIdInstituicao').val(ui.item.id);
+            $('#txtNomeInstituicao').focus();
+        },
+        search: function(event, ui) {
+            $("#instituicao_load").show();                    
+        },
+        response: function(event, ui) {
+            $("#instituicao_load").hide();                                  
+       }
+    });    
+});

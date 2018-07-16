@@ -1,0 +1,152 @@
+[
+    {
+        "stepId": "STEP1",
+        "stepName": "Url: showLogin",
+        "infFile": "t1.inf",
+        "time": 1531708174416
+    },
+    {
+        "stepId": "STEP2",
+        "stepName": "Url: listarEdicoesAtivas",
+        "infFile": "t2.inf",
+        "time": 1531708174726
+    },
+    {
+        "stepId": "STEP3",
+        "stepName": "Link: SIEPE_Teste - SIEPE_Teste by Dionatã",
+        "infFile": "t3.inf",
+        "time": 1531708174991
+    },
+    {
+        "stepId": "STEP4",
+        "stepName": "Custom Request: isLogado",
+        "infFile": "t4.inf",
+        "time": 1531708175040
+    },
+    {
+        "stepId": "STEP5",
+        "stepName": "Submit Data: verificaPerfil",
+        "infFile": "t5.inf",
+        "time": 1531708175404
+    },
+    {
+        "stepId": "STEP6",
+        "stepName": "Url: painelParticipante",
+        "infFile": "t6.inf",
+        "time": 1531708176053
+    },
+    {
+        "stepId": "STEP7",
+        "stepName": "Url: getInstituicaoAjax",
+        "infFile": "t7.inf",
+        "time": 1531708176095
+    },
+    {
+        "stepId": "STEP8",
+        "stepName": "Url: getInstituicaoAjax_2",
+        "infFile": "t8.inf",
+        "time": 1531708176168
+    },
+    {
+        "stepId": "STEP9",
+        "stepName": "Submit Data: testeInternoAjax",
+        "infFile": "t9.inf",
+        "time": 1531708176218
+    },
+    {
+        "stepId": "STEP10",
+        "stepName": "Custom Request: isLogado_2",
+        "infFile": "t10.inf",
+        "time": 1531708176262
+    },
+    {
+        "stepId": "STEP11",
+        "stepName": "Submit Data: salvarInscricaoEvento",
+        "infFile": "t11.inf",
+        "time": 1531708176413
+    },
+    {
+        "stepId": "STEP12",
+        "stepName": "Url: painelParticipante_2",
+        "infFile": "t12.inf",
+        "time": 1531708176780
+    },
+    {
+        "stepId": "STEP13",
+        "stepName": "Url: listarTrabalhos",
+        "infFile": "t13.inf",
+        "time": 1531708177229
+    },
+    {
+        "stepId": "STEP14",
+        "stepName": "Url: submeteTrabalho",
+        "infFile": "t14.inf",
+        "time": 1531708177971
+    },
+    {
+        "stepId": "STEP15",
+        "stepName": "Submit Data: setaIdiomaSessionAjax",
+        "infFile": "t15.inf",
+        "time": 1531708178086
+    },
+    {
+        "stepId": "STEP16",
+        "stepName": "Submit Data: buscarModalidadeAjax",
+        "infFile": "t16.inf",
+        "time": 1531708178176
+    },
+    {
+        "stepId": "STEP17",
+        "stepName": "Submit Data: buscarProgramaAjax",
+        "infFile": "t17.inf",
+        "time": 1531708178220
+    },
+    {
+        "stepId": "STEP18",
+        "stepName": "Submit Data: buscarAreaAjax",
+        "infFile": "t18.inf",
+        "time": 1531708178269
+    },
+    {
+        "stepId": "STEP19",
+        "stepName": "Submit Data: buscarModalidadesResumoExpAjax",
+        "infFile": "t19.inf",
+        "time": 1531708178323
+    },
+    {
+        "stepId": "STEP20",
+        "stepName": "Submit Data: undefined",
+        "infFile": "t20.inf",
+        "time": 1531708178371
+    },
+    {
+        "stepId": "STEP21",
+        "stepName": "Custom Request: pesquisaOrientador",
+        "infFile": "t21.inf",
+        "time": 1531708178438
+    },
+    {
+        "stepId": "STEP22",
+        "stepName": "Submit Data: resultadoPesquisaOrientador",
+        "infFile": "t22.inf",
+        "time": 1531708178521
+    },
+    {
+        "stepId": "STEP23",
+        "stepName": "Custom Request: isLogado_3",
+        "infFile": "t23.inf",
+        "time": 1531708178560
+    },
+    {
+        "stepId": "STEP24",
+        "stepName": "Submit Data: salvarSubmissao",
+        "infFile": "t24.inf",
+        "time": 1531708179287
+    },
+    {
+        "stepId": "STEP25",
+        "stepName": "Url: listarTrabalhos_2",
+        "infFile": "t25.inf",
+        "time": 1531708180064
+    }
+]

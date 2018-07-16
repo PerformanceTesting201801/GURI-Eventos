@@ -1,0 +1,126 @@
+var cnt;
+
+function wordcount(count) {
+    
+    count = count.trim();    
+    if(count != ''){
+        var words = count.split(/\s/);
+        cnt = words.length;
+        var ele = document.getElementById('w_count');
+        ele.value = cnt;
+    }
+}
+
+function zeraContador(count){
+    if(count.length == 0){
+        var ele = document.getElementById('w_count');
+        ele.value = 0;
+    }
+}
+
+function wordcountTitulo(count) {
+    
+    count = count.trim();    
+    if(count != ''){
+        var words = count.split(/\s/);
+        cnt = words.length;
+        var ele = document.getElementById('w_count_titulo');
+        ele.value = cnt;
+    }
+}
+
+function zeraContadorTitulo(count){
+    if(count.length == 0){
+        var ele = document.getElementById('w_count_titulo');
+        ele.value = 0;
+    }
+}
+
+/**
+ * Limita carateres
+ */
+function limitaCaracteres(campo, numero) {          
+    var idCampo = $(campo).attr('id');
+    var texto   = $("#"+idCampo).val();
+    var largura = texto.length;
+    
+    if (largura > numero) {
+        $("#"+idCampo).val(texto.substr(0, numero));                        
+    } 
+    
+}
+
+/**
+ * Conta quantos caracteres possui o campo
+ */
+function contaCaracteres(campo, limite) {
+    
+   if (campo.value.length > limite) {
+       campo.value = campo.value.substring(0, limite);
+   } else {
+       $("#txtLabelContador").html('Caractere(s) restante(s): ');
+       $("#txtContador").html(limite - campo.value.length);
+       $("#txtContadorValue").val(limite - campo.value.length);
+   }
+}
+
+// Exibe o resultado de pesquisa de usuários administradores
+function resultadoPesquisaOrientador(idDiv, acao) {
+    var url  = $("#BASE_URL").val();
+    var nome = $("#txtNomeUsuario").val();
+    
+    $.post(url + acao, {nome: nome}, function(data) {
+        $("#" + idDiv).html(data);
+    });
+}
+
+/**
+ * Preenche os dados do orientador na tela
+ * @param {type} nomeOrientador
+ * @param {type} emailOrientador
+ * @returns {undefined}
+ */
+function preencheOrientador(nomeOrientador,emailOrientador) {    
+    $('#txtNome1').val(converteLetras(nomeOrientador));
+    $('#txtEmail1').val(emailOrientador);
+    $('#txtTitulo1').val('Docente');
+    $('#dialog_modal_padrao').dialog('close');    
+    return;
+}
+
+/*
+ * Mostra ou esconde o botao de busca do orientador
+ */
+function toggleBuscaOrientador(mostraBusca) {
+    if (mostraBusca == 'S') {
+        $("#botBuscaOrient").show();        
+        $("#txtTitulo1").find('option').remove().end();
+        $("#txtTitulo1").html("<option>Docente</option>");
+    }else{        
+        $("#botBuscaOrient").hide();
+        $("#txtTitulo1").append("<option>Docente</option>");
+        $("#txtTitulo1").append("<option>Aluno de graduação</option>");
+        $("#txtTitulo1").append("<option>Aluno de pós-graduação</option>");
+        $("#txtTitulo1").append("<option>Técnico Administrativo em Educação</option>");
+        $("#txtTitulo1").append("<option>Outro</option>");
+    }
+}
+
+/**
+ * Converte o case do resultado da pesquisa para a primeira letra de cada nome em maiusculo
+ */
+function converteLetras(nomeOrientador) {
+    return nomeOrientador.toLowerCase().replace( /(^| )(\w)/g, 
+            function(x){
+                return x.toUpperCase();
+            } 
+        );
+}
+
+/**
+ * Converte o texto para maiusculo
+ */
+function maiusculo(campo) {     
+    $(campo).val(campo.value.toUpperCase());
+}
+

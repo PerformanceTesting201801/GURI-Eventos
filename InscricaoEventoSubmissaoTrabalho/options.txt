@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\Mauricio Escobar\Documents\VuGen\Scripts\InscricaoEventoSubmissaoTrabalho
+-IC:\Program Files (x86)\HPE\LoadRunner\include
+-ec:\users\mauricio escobar\documents\vugen\scripts\inscricaoeventosubmissaotrabalho\\logfile.log
+c:\users\mauricio escobar\documents\vugen\scripts\inscricaoeventosubmissaotrabalho\\combined_InscricaoEventoSubmissaoTrabalho.c
+c:\users\mauricio escobar\documents\vugen\scripts\inscricaoeventosubmissaotrabalho\\pre_cci.c

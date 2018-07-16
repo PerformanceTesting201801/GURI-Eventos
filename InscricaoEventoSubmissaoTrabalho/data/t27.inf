@@ -1,0 +1,15 @@
+[t27]
+FileName1=t27.html
+URL1=https://guriensino.unipampa.edu.br/guri/ptl/sistema/isLogado
+Total=3
+RequestHeaderFile=t27_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t27_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_27.xml
+FileName2=t27_ui-bg_dots-small_65_bcbdbc_2x2.png
+URL2=https://guriensino.unipampa.edu.br/guri/public/js/jquery-ui-1.9.0/css/custom-theme/images/ui-bg_dots-small_65_bcbdbc_2x2.png
+FileName3=t27_ui-bg_highlight-hard_100_f6f6f6_1x100.png
+URL3=https://guriensino.unipampa.edu.br/guri/public/js/jquery-ui-1.9.0/css/custom-theme/images/ui-bg_highlight-hard_100_f6f6f6_1x100.png
+[ProtocolInfo]
+ProtocolId=QTWeb

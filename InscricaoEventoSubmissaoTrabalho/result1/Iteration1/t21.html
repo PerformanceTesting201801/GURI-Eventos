@@ -1,0 +1,29 @@
+<script>
+    $('#txtNomeUsuario').keypress(function(event) {
+        if (event.keyCode == '13') {
+            $('#btnPesqUsuario').click();
+            event.preventDefault();
+        }
+    });
+</script>
+
+<div class='titulo_right'>Buscar Orientador</div>
+<div class="clear"></div>
+
+<div id="frmPesquisaOrientador" class="form_left">
+    <p>
+        <label class="label_dialog" for="txtNomeUsuario">Nome:</label>        
+        <br/>
+        <input name="txtNomeUsuario" type="text" id="txtNomeUsuario" size="30" />
+        
+        <button type="button" id="btnPesqUsuario"  value="pesquisar" 
+                onclick="resultadoPesquisaOrientador('resultado_pesquisa',
+                                'evt/participante/resultadoPesquisaOrientador/')">
+            <img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/search.png'
+                 alt="Executar pesquisa" height="15" width="15"/> <span class="button_text">Pesquisar</span>
+        </button> 
+    </p>
+    
+</div>
+<div class="clear"></div>
+<div id="resultado_pesquisa"></div>

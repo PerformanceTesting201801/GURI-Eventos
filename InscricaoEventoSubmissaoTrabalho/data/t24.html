@@ -1,0 +1,542 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="pt-br" lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta name="robots" content="noindex" />
+        <link rel="icon" href="https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/favicon-guri16.png" type="image/png"/>
+        <!-- css global -->
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/estilo_menu.css' type="text/css" />
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/estilo_admin.css' type="text/css" />
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/tabs.css' type="text/css" />
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/dd.css' type="text/css" />
+        <link rel="stylesheet" href="https://guriensino.unipampa.edu.br/guri/public/js/jquery-ui-1.9.0/css/custom-theme/jquery-ui-1.8.18.custom.css" type="text/css" />
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/select2.min.css' type="text/css" />
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/nav_etapas.css' type="text/css" />
+        <link rel="stylesheet" href='https://guriensino.unipampa.edu.br/guri/public/themes/moder//css/form_2018.css' type="text/css" />
+
+        <!-- css de cada modulo -->
+        
+        <!-- js global -->
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/jquery-ui-1.9.0/js/jquery-1.8.2.js"></script>
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/jquery-ui-1.9.0/js/jquery-ui-1.9.0.custom.min.js"></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/angular.min.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/jquery.price_format.1.0.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/jquery.maskedinput-1.3.1.min.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/jquery.upload-1.0.2.min.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/jquery.cookie.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/jquery.multifile.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/jquery.dd.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/acessivel.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/dialog_sessao.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/admin.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/validacoes.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/tabs.js'></script>
+        <script type="text/javascript" src='https://guriensino.unipampa.edu.br/guri/public/js/tabs.min.js'></script>
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/select2/js/select2.min.js"></script>
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/select2/js/i18n/pt-BR.js"></script>
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/jquery-i18n/jquery.i18n.min.js"></script>
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/jquery-i18n/dicionario.js"></script>
+        <script type="text/javascript" src="https://guriensino.unipampa.edu.br/guri/public/js/jquery-i18n/tradutor.js"></script>
+
+        <!-- js de cada modulo -->
+                <title>GURI - Eventos - Listar Edições Ativas</title>
+        <object>
+            <noscript>
+                <p class="avisoScript">
+                    AVISO: Este sistema requer que o JavaScript esteja habilitado para funcionar corretamente.<br/>
+                    Por favor, habilite o JavaScript do seu navegador e atualize a página.
+                </p>
+            </noscript>
+        </object>
+    </head>
+    <body>
+
+        <!-- secao de cabecalho/menu do sistema-->
+        
+
+<div class="reset">    
+    <div id="novo_tarja-topo"></div>
+    <div id="novo_topo">
+        
+    	<h1 id="novo_guri-marca">
+            <a href="https://guriensino.unipampa.edu.br/guri/" title="GURI">
+                <img id="novo_marca" src="https://guriensino.unipampa.edu.br/guri/public/themes/moder/imgs/logo_guri.png" alt="GURI"/>
+            </a>            
+        </h1>
+        
+    	<h2 id="novo_unipampa">
+            <a href="http://www.unipampa.edu.br" title="Acessar Portal da UNIPAMPA" target="_new" >
+                <img class="novo_marca-unipampa" src="https://guriensino.unipampa.edu.br/guri/public/themes/moder/imgs/marca.png" alt="Acessar Portal da UNIPAMPA"/>
+            </a>
+        </h2>   
+        
+        <div id="novo_menu-auxiliar">
+            
+            <div class="novo_login">
+                                    <a class="novo_botao-login" href="https://guriensino.unipampa.edu.br/guri/ptl/sistema/showLogin">
+                        <img src="https://guriensino.unipampa.edu.br/guri/public/themes/moder/imgs/login.png" alt="Login"
+                             style="vertical-align:-2px;" /> Login
+                    </a>
+                                
+            </div>
+
+            <div class="clear"></div>
+            <div id="novo_menu-acessibilidade">
+                <div class="novo_alterar-fonte">
+                    <a href="#" title="Diminuir Fonte" class="novo_amenos decreaseFont">A-</a>
+                    <a href="#" title="Fonte Normal" class="novo_a resetFont">A</a>
+                    <a href="#" title="Aumentar Fonte" class="novo_amais increaseFont">A+</a>
+                </div>  
+
+                <div class="novo_contraste">
+                    <a href="#" title="Alternar Contraste" class="novo_link-contraste setContrast" >
+                        <img src="https://guriensino.unipampa.edu.br/guri/public/themes/moder/imgs/contraste.png" 
+                             style="vertical-align:middle;" alt="Contraste"/> 
+                        <span class="novo_menu-sumir_palavra">Contraste</span></a>
+                </div>
+
+                <div class="novo_site-map">
+                    <a href="https://guriensino.unipampa.edu.br/guri/ptl/sistema/menuDeAcessibilidade" 
+                       class="novo_link-mapa" title="Mapa do Site">
+                        <img src="https://guriensino.unipampa.edu.br/guri/public/themes/moder/imgs/mapa-site.png" 
+                             style="vertical-align:middle;" alt="Mapa do Site" /> 
+                        <span class="novo_menu-sumir_palavra">Mapa do Site</span></a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+                    <div id="novo_menu">
+            
+                        <ul id="novo_menu-principal">
+                              
+                                  
+                    <li class="novo_menu">
+                        <a href="#" class="novo_link-menu" id="area_menu_1">ACADÊMICO &nbsp;&rsaquo;</a>
+                        <div id="div_area_menu_1" class="novo_submenu-quadro">
+                            <ul class="novo_submenu1">
+                                                                                                      
+                                                                                                                                                        
+                                        <li><a href="#" class="novo_link-submenu">PROCESSO SELETIVO</a></li>
+                                                                                                          
+                                                                                                                                                        
+                                        <li><a href="#" class="novo_link-submenu">EVENTOS</a></li>
+                                                                                                                                                                                                                                        </ul>
+                            <ul class="novo_abas-conteudo1">  
+                                                                     
+                                                                                                            <li class="novo_conteudo novo_aba-ativa">
+                                                                                                                                    <div class="novo_coluna-1">
+                                                    <ul class="novo_menu-opcoes">     
+                                                        <li>    
+                                                            <h3 class="novo_titulo-menus">
+                                                                <img src="https://guriensino.unipampa.edu.br/guri/application/modules/psa/views/public/imgs/icone_psa_16.png"
+                                                                     alt="Processo Seletivo "/>                                            
+                                                                    Processo Seletivo 
+                                                                                                                                
+                                                                <a href="javascript:abrirDialog('ptl/sistema/dialogAjuda/psa', 
+                                                                                                         'dialog_modal_padrao', '600', '250', 
+                                                                                                         'Ajuda')" 
+                                                                   title="Ajuda"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_vermelho.png'
+                                                                                   width="14" height="14"  border="0" alt="Ajuda" title="Ajuda" />
+                                                                </a>                                                                
+                                                            </h3>
+                                                        </li>
+                                               
+                                                                                                                                                                                                                                                            <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/psa/processos/" class="novo_link-opcoes">Nova Inscrição</a></li>                                                    
+                                                                                                                                                                                                                                                                                                                        <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/psa/acesso/areaDoCandidato/" class="novo_link-opcoes">Área do Candidato</a></li>                                                    
+                                                                                                                                                                                                                                                                                                                        <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/psa/inscricao/autenticar/" class="novo_link-opcoes">Autenticar Documento</a></li>                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+
+                                                    </ul>
+                                                </div>
+                                                                                
+                                                                                                                                    <div class="novo_coluna-1">
+                                                    <ul class="novo_menu-opcoes">     
+                                                        <li>    
+                                                            <h3 class="novo_titulo-menus">
+                                                                <img src="https://guriensino.unipampa.edu.br/guri/application/modules/pss/views/public/imgs/icone_psa_16.png"
+                                                                     alt="SISU "/>                                            
+                                                                    SISU 
+                                                                                                                                
+                                                                <a href="javascript:abrirDialog('ptl/sistema/dialogAjuda/pss', 
+                                                                                                         'dialog_modal_padrao', '600', '250', 
+                                                                                                         'Ajuda')" 
+                                                                   title="Ajuda"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_vermelho.png'
+                                                                                   width="14" height="14"  border="0" alt="Ajuda" title="Ajuda" />
+                                                                </a>                                                                
+                                                            </h3>
+                                                        </li>
+                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/pss/publico/loginCandidatoMatCondicional/" class="novo_link-opcoes">Matrícula Condicional</a></li>                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+
+                                                    </ul>
+                                                </div>
+                                                                                
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                            </li>                                             
+                                     
+                                                                                                            <li class="novo_conteudo ">
+                                                                                                                        
+                                                                                                                        
+                                                                                                                                    <div class="novo_coluna-1">
+                                                    <ul class="novo_menu-opcoes">     
+                                                        <li>    
+                                                            <h3 class="novo_titulo-menus">
+                                                                <img src="https://guriensino.unipampa.edu.br/guri/application/modules/evt/views/public/imgs/meeting_16.png"
+                                                                     alt="Eventos Institucionais "/>                                            
+                                                                    Eventos Institucionais 
+                                                                                                                                
+                                                                <a href="javascript:abrirDialog('ptl/sistema/dialogAjuda/evt', 
+                                                                                                         'dialog_modal_padrao', '600', '250', 
+                                                                                                         'Ajuda')" 
+                                                                   title="Ajuda"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_vermelho.png'
+                                                                                   width="14" height="14"  border="0" alt="Ajuda" title="Ajuda" />
+                                                                </a>                                                                
+                                                            </h3>
+                                                        </li>
+                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/evt/evento/listarEdicoesAtivas/" class="novo_link-opcoes">Inscrição em Eventos</a></li>                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+
+                                                    </ul>
+                                                </div>
+                                                                                
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                            </li>                                             
+                                                                     
+                            </ul>                                              
+                            
+                        </div>
+                    </li>    
+                                              
+                                  
+                    <li class="novo_menu">
+                        <a href="#" class="novo_link-menu" id="area_menu_2">SISTEMA &nbsp;&rsaquo;</a>
+                        <div id="div_area_menu_2" class="novo_submenu-quadro">
+                            <ul class="novo_submenu2">
+                                                                                                                                                                                                                                              
+                                                                                                                                                        
+                                        <li><a href="#" class="novo_link-submenu">RELATÓRIOS</a></li>
+                                                                                                          
+                                                                                                                                                        
+                                        <li><a href="#" class="novo_link-submenu">SISTEMA</a></li>
+                                                                                                </ul>
+                            <ul class="novo_abas-conteudo2">  
+                                                                     
+                                                                                                            <li class="novo_conteudo novo_aba-ativa">
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                                    <div class="novo_coluna-1">
+                                                    <ul class="novo_menu-opcoes">     
+                                                        <li>    
+                                                            <h3 class="novo_titulo-menus">
+                                                                <img src="https://guriensino.unipampa.edu.br/guri/application/modules/rpt/views/public/imgs/report_16.png"
+                                                                     alt="Relatórios "/>                                            
+                                                                    Relatórios 
+                                                                                                                                
+                                                                <a href="javascript:abrirDialog('ptl/sistema/dialogAjuda/rpt', 
+                                                                                                         'dialog_modal_padrao', '600', '250', 
+                                                                                                         'Ajuda')" 
+                                                                   title="Ajuda"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_vermelho.png'
+                                                                                   width="14" height="14"  border="0" alt="Ajuda" title="Ajuda" />
+                                                                </a>                                                                
+                                                            </h3>
+                                                        </li>
+                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/rpt/relatorios/dadosAbertos/" class="novo_link-opcoes">Dados Abertos</a></li>                                                    
+                                                                                                                                                                                                                                                                                                                                                             
+
+                                                    </ul>
+                                                </div>
+                                                                                
+                                                                                                                        
+                                                                                                                        
+                                                                            </li>                                             
+                                     
+                                                                                                            <li class="novo_conteudo ">
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                                    <div class="novo_coluna-1">
+                                                    <ul class="novo_menu-opcoes">     
+                                                        <li>    
+                                                            <h3 class="novo_titulo-menus">
+                                                                <img src="https://guriensino.unipampa.edu.br/guri/application/modules/ptl/views/public/imgs/cubos_16.png"
+                                                                     alt="Portal "/>                                            
+                                                                    Portal 
+                                                                                                                                
+                                                                <a href="javascript:abrirDialog('ptl/sistema/dialogAjuda/ptl', 
+                                                                                                         'dialog_modal_padrao', '600', '250', 
+                                                                                                         'Ajuda')" 
+                                                                   title="Ajuda"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_vermelho.png'
+                                                                                   width="14" height="14"  border="0" alt="Ajuda" title="Ajuda" />
+                                                                </a>                                                                
+                                                            </h3>
+                                                        </li>
+                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/ptl/sistema/principal/" class="novo_link-opcoes">Início</a></li>                                                    
+                                                                                                                                                                                                                                         
+
+                                                    </ul>
+                                                </div>
+                                                                                
+                                                                                                                                    <div class="novo_coluna-1">
+                                                    <ul class="novo_menu-opcoes">     
+                                                        <li>    
+                                                            <h3 class="novo_titulo-menus">
+                                                                <img src="https://guriensino.unipampa.edu.br/guri/application/modules/man/views/public/imgs/help_verde.png"
+                                                                     alt="Repositório de Manuais "/>                                            
+                                                                    Repositório de Manuais 
+                                                                                                                                
+                                                                <a href="javascript:abrirDialog('ptl/sistema/dialogAjuda/man', 
+                                                                                                         'dialog_modal_padrao', '600', '250', 
+                                                                                                         'Ajuda')" 
+                                                                   title="Ajuda"><img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_vermelho.png'
+                                                                                   width="14" height="14"  border="0" alt="Ajuda" title="Ajuda" />
+                                                                </a>                                                                
+                                                            </h3>
+                                                        </li>
+                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="novo_lista-opcoes"><a href="https://guriensino.unipampa.edu.br/guri/man/publico/" class="novo_link-opcoes">Manuais de Usuário</a></li>                                                    
+                                                                                                                     
+
+                                                    </ul>
+                                                </div>
+                                                                                
+                                                                            </li>                                             
+                                                                     
+                            </ul>                                              
+                            
+                        </div>
+                    </li>    
+                                        </ul>                    
+            <div id="novo_busca">               
+                <p class="novo_fundo-busca">
+                    <input type="text"  name="txtPesquisaArvore" id="txtIdPesquisaArvore" 
+                           class="novo_text-busca"
+                           value="Pesquisar..."
+                           size="40" maxlength="80" title="Informe o nome do módulo ou item de menu a ser acessado" 
+                           onblur="this.value = 'Pesquisar...';" 
+                           onfocus="if (this.value == 'Pesquisar...') this.value = ''; limparArvorePesquisa()"/>
+
+
+                    <img id="loadingItens" class="loading" alt="Carregando" style="position:absolute; top: 15px; left: -13px;"
+                         src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/ajax-loader-branco.gif' />                            
+
+
+                    <input type="submit" value="" class="novo_botao-busca" />
+                </p>
+            </div>
+        </div>
+    </div>
+
+<div id="header_place" >
+    <span class="instrucao_campo">&nbsp; &raquo; <b>Área:</b> Acadêmico &raquo; <b>Subárea:</b> Eventos &raquo; <b>Módulo: </b>Eventos Institucionais &raquo; <b>Ação: </b>Eventos - Listar Edições Ativas</span>    
+</div>
+<div class="clear"></div>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        
+        $(".novo_submenu1 li").on("click", function() {
+            var index = $(this).index();
+            $(".novo_abas-conteudo1>li").removeClass('novo_aba-ativa');
+            $(".novo_abas-conteudo1>li").eq(index).addClass('novo_aba-ativa');
+        });
+
+        $(".novo_submenu2 li").on("click", function() {
+            var index = $(this).index();
+            $(".novo_abas-conteudo2>li").removeClass('novo_aba-ativa');
+            $(".novo_abas-conteudo2>li").eq(index).addClass('novo_aba-ativa');
+        });
+
+       $(".novo_submenu3 li").on("click", function() {
+            var index = $(this).index();
+            $(".novo_abas-conteudo3>li").removeClass('novo_aba-ativa');
+            $(".novo_abas-conteudo3>li").eq(index).addClass('novo_aba-ativa');
+        });
+
+        $('.novo_submenu1 li a').click(function(){
+            $('.novo_submenu1 li a').removeClass('novo_ativo');
+            $(this).addClass('novo_ativo');
+        });
+
+        $('.novo_submenu2 li a').click(function(){
+            $('.novo_submenu2 li a').removeClass('novo_ativo');
+            $(this).addClass('novo_ativo');
+        });
+
+        $('.novo_submenu3 li a').click(function(){
+            $('.novo_submenu3 li a').removeClass('novo_ativo');
+            $(this).addClass('novo_ativo');
+        });
+        
+        $('#area_menu_1').click(function() {
+            $(".novo_submenu1 li a").eq(0).trigger('click');                       
+        });  
+        
+        $('#area_menu_2').click(function() {
+            $(".novo_submenu2 li a").eq(0).trigger('click');
+        });
+        
+        $('#area_menu_3').click(function() {
+            $(".novo_submenu3 li a").eq(0).trigger('click');
+        });
+        
+        $('#area_menu_1').click(function() {
+            $('#div_area_menu_1').addClass('novo_submenu-quadro-click');
+            $('#div_area_menu_2').removeClass('novo_submenu-quadro-click');
+            $('#div_area_menu_3').removeClass('novo_submenu-quadro-click');              
+        });    
+
+        $('#area_menu_2').click(function() {
+            $('#div_area_menu_2').addClass('novo_submenu-quadro-click'); 
+            $('#div_area_menu_1').removeClass('novo_submenu-quadro-click');
+            $('#div_area_menu_3').removeClass('novo_submenu-quadro-click');            
+        });    
+        
+        $('#area_menu_3').click(function() { 
+            $('#div_area_menu_3').addClass('novo_submenu-quadro-click');           
+            $('#div_area_menu_1').removeClass('novo_submenu-quadro-click');
+            $('#div_area_menu_2').removeClass('novo_submenu-quadro-click');            
+        }); 
+        
+        ocultarMenuPrincipal('.content');
+        ocultarMenuPrincipal('#novo_topo');
+        ocultarMenuPrincipal('#footer');
+        ocultarMenuPrincipal('.conteudo-central');
+    });
+    
+    function ocultarMenuPrincipal(alvo) {
+        $(alvo).on('mouseenter', function(){
+            $('#div_area_menu_1').removeClass('novo_submenu-quadro-click');
+            $('#div_area_menu_2').removeClass('novo_submenu-quadro-click');   
+            $('#div_area_menu_3').removeClass('novo_submenu-quadro-click');             
+        });          
+    }
+
+</script>  
+        <div class="conteudo-central">
+        <!-- secao de conteudo do sistema-->
+            <div class="content">
+                <input type="hidden" id="BASE_URL" value="https://guriensino.unipampa.edu.br/guri/"/>
+                <input type="hidden" id="TEMPO_SESSAO_TOTAL" value="14400"/>
+                <input type="hidden" id="USER_LANG" value="pt-BR" />
+                
+<div class="botoes_left">
+     <button onclick="redirecionar('https://guriensino.unipampa.edu.br/guri/ptl/sistema/principal')" 
+        type="button" 
+        title="Início"
+        id="botao_inicio">
+    <img src='https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/home_32.png'
+         alt="Início"/>
+</button>   
+    
+    <a href="https://guriensino.unipampa.edu.br/guri/evt/painel/">
+        <button>
+            <img src='https://guriensino.unipampa.edu.br/guri/application/modules/evt/views/public/imgs/etapas_32.png'
+                 alt="Painel de Administração"
+                 title="Painel de Administração"/>
+        </button>
+    </a>
+</div>
+
+<div class="titulo_right"> Eventos Disponíveis </div>
+
+<table width="100%" border='0' class="center_table" id="data_table">
+    <tr class="linha_par">
+        <td><b>Evento</b></td>
+        <td><b>Data Início</b></td>        
+        <td><b>Data Fim</b></td>        
+    </tr>
+    
+                           
+                    
+        <tr class='linha_impar' id="linha_1">            
+        
+            <td>
+                <a href="https://guriensino.unipampa.edu.br/guri/evt/evento/selecionaPerfil/342">
+                    SEMINÁRIO ACADÊMICO FERRADURA DOS VINHEDOS - III Seminário Acadêmico Ferradura dos Vinhedos                </a>
+            </td>        
+            <td width="150">15/06/2018 00:00:00</td>
+            <td width="150">15/10/2018 23:59:59</td>
+        </tr>
+                
+                    
+        <tr class='linha_par' id="linha_2">            
+        
+            <td>
+                <a href="https://guriensino.unipampa.edu.br/guri/evt/evento/selecionaPerfil/362">
+                    SIEPE_Teste - SIEPE_Teste by Dionatã                </a>
+            </td>        
+            <td width="150">01/07/2018 13:00:00</td>
+            <td width="150">31/08/2018 13:00:00</td>
+        </tr>
+        </table>
+<div class="paginacao"></div>
+                </div>
+
+            <div id="carregando">
+                <br/><br/><br/><br/><br/><br/><br/>
+                <br/><br/><br/><br/><br/><br/>
+                <div id="carregando_text">
+                    <div id="carregando_mensagem">Enviando! </div><br/>
+                    <img src="https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/ajax-loader-big.gif"  alt="Enviando..." />
+                </div>
+            </div>
+
+        </div>
+        <!-- secao de rodape do sistema-->
+        
+<div id="footer">
+    
+            Conexão: <span class='textRed'> 
+                    <b>Testes</b>
+                  </span>
+        <br/><br/>
+        
+    
+    <a href="javascript:abrirDialog('ptl/sistema/centralDeAjuda', 
+                                        'dialog_modal_padrao', '500', '540', 
+                                        'Central de Ajuda',
+                                        '', 
+                                        'dialog_modal_padrao')" >
+    <img src="https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/help_verde.png" 
+         alt="Central de Ajuda"/>
+        Central de Ajuda</a>   <br/><br/>
+    Desenvolvido: 
+    <a href="http://www.dtic.unipampa.edu.br" target="_new">DTIC</a> - 
+    <a href="http://www.unipampa.edu.br" target="_new">Universidade Federal do Pampa</a> <br/>
+    
+    
+     <p class="center">
+        <a href="http://validator.w3.org/check?uri=referer" target="_new">
+            <img src="https://guriensino.unipampa.edu.br/guri/public/themes/moder//imgs/valid-xhtml10-blue.png" alt="Valid XHTML 1.0 Transitional" height="23" width="66" />
+        </a>         
+     </p>
+     
+ </div>        <!-- div para mensagens de validacao-->
+        <div id="dialog_validacao" title="Validação"></div>
+
+        <!-- dialog padrao para mensagens -->
+        <div id="dialog_modal_padrao"></div>
+
+        <!-- div para confirmacao de renovação de sessão-->
+        <div id="dialog_sessao" title="Renovar Sessão">
+            Sua sessão expira em <b><span id="div_tempo_sessao_dialog"></span></b> segundos
+        </div>
+
+        <!-- div para confirmacao de operacoes -->
+        <div id="dialog_confirmacao" title="Confirmação"></div>
+            </body>
+</html>

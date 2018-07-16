@@ -1,0 +1,54 @@
+// Configuracao para dialogs
+$(document).ready(function() {
+    defineMascarasDeCampos();
+});
+
+// Exibe o resultado de pesquisa de usuários administradores
+function resultadoPesquisaUsuario(idDiv, acao) {
+    var url  = $("#BASE_URL").val();
+    var nome = $("#txtNomeUsuario").val();
+    
+    $.post(url + acao, {nome: nome}, function(data) {
+        $("#" + idDiv).html(data);
+    });
+}
+
+function controlaBolsistaUnipampa(value){
+    if(value == 'N'){
+        $('#txtPermiteCatBolsistasUnipampa').attr('disabled', 'disabled');
+        $('#txtPermiteCatBolsistasUnipampa').addClass('disabled_input');
+        $('#txtPermiteAreaBolsistasUnipampa').attr('disabled', 'disabled');
+        $('#txtPermiteAreaBolsistasUnipampa').addClass('disabled_input');        
+        $('#txtDataUnipampa').attr('disabled', 'disabled');
+        $('#txtDataUnipampa').addClass('disabled_input');
+        $('#considerarTurnoUnipampa').attr('disabled', 'disabled');
+    }else{
+        $('#txtPermiteCatBolsistasUnipampa').removeAttr('disabled');
+        $('#txtPermiteCatBolsistasUnipampa').removeClass('disabled_input');
+        $('#txtPermiteAreaBolsistasUnipampa').removeAttr('disabled');
+        $('#txtPermiteAreaBolsistasUnipampa').removeClass('disabled_input');        
+        $('#txtDataUnipampa').removeAttr('disabled');
+        $('#txtDataUnipampa').removeClass('disabled_input');
+        $('#considerarTurnoUnipampa').removeAttr('disabled');
+    }
+}
+
+function controlaBolsistaCNPQ(value){
+    if(value == 'N'){
+        $('#txtPermiteCatBolsistasCNPQ').attr('disabled', 'disabled');
+        $('#txtPermiteCatBolsistasCNPQ').addClass('disabled_input');
+        $('#txtPermiteAreaBolsistasCNPQ').attr('disabled', 'disabled');
+        $('#txtPermiteAreaBolsistasCNPQ').addClass('disabled_input');        
+        $('#txtDataCNPQ').attr('disabled', 'disabled');
+        $('#txtDataCNPQ').addClass('disabled_input');
+        $('#considerarTurnoCNPQ').attr('disabled', 'disabled');
+    }else{
+        $('#txtPermiteCatBolsistasCNPQ').removeAttr('disabled');
+        $('#txtPermiteCatBolsistasCNPQ').removeClass('disabled_input');
+        $('#txtPermiteAreaBolsistasCNPQ').removeAttr('disabled');
+        $('#txtPermiteAreaBolsistasCNPQ').removeClass('disabled_input');        
+        $('#txtDataCNPQ').removeAttr('disabled');
+        $('#txtDataCNPQ').removeClass('disabled_input');
+        $('#considerarTurnoCNPQ').removeAttr('disabled');
+    }
+}

@@ -1,0 +1,13 @@
+[t35]
+FileName1=t35.html
+URL1=https://guriensino.unipampa.edu.br/guri/ptl/sistema/isLogado
+Total=2
+RequestHeaderFile=t35_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t35_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_35.xml
+FileName2=t35_ui-bg_dots-small_65_bcbdbc_2x2.png
+URL2=https://guriensino.unipampa.edu.br/guri/public/js/jquery-ui-1.9.0/css/custom-theme/images/ui-bg_dots-small_65_bcbdbc_2x2.png
+[ProtocolInfo]
+ProtocolId=QTWeb

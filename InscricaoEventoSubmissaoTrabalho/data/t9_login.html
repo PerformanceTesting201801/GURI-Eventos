@@ -1,0 +1,10 @@
+$(document).ready(function() {
+
+  // caixa de texto para pesquisa da Material
+    $('#txtSenha').keypress(function(event) {
+        if (event.keyCode == '13') {
+            $('#btnEntrar').click();
+            event.preventDefault();
+        }
+    });
+});

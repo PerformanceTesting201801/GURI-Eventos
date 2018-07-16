@@ -1,0 +1,29 @@
+$(document).ready(function() {
+    mostraInterno($("#txtModalidade option:selected" ).val());
+    console.log('aqui');
+});
+
+/**
+ * Consulta ajax para campos requeridos conforme modalidade selecionada
+ * @param {type} modalidade
+ * @returns {undefined}
+ */
+function mostraInterno (modalidade) {
+    var URL          = $("#BASE_URL").val();
+    var divInterno   = "#categoria_interno";
+    
+    if (modalidade > 0) {
+        $.post(URL+'evt/participante/testeInternoAjax/', 
+            {modalidade: modalidade},
+            function(data) {                
+                if(data.length > 0) {
+                   if (data == '1')
+                     $(divInterno).show();    
+                  if (data=='0')
+                     $(divInterno).hide();    
+                }
+        });
+    }else{
+        $(divInterno).hide();    
+    }    
+}

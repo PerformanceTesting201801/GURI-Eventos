@@ -1,0 +1,9 @@
+GET /api/version HTTP/1.1
+Host: app.tmetric.com
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: OpenIdConnect.nonce.webapp.5sYWEfC2nm39pl5Xsp9PkX2eoMZQSTscuLCX%2BIuebgo%3D=MGJWLWlDcXVMcWthT1dhbjRMWXdOdGtnUExna1FGNzJDbGZhbzJMQlQ1Z2hEeDdhVEh3MmZVTnI0dGdnZUJoUm5yZDlhV05PVndyekR6QXNqTWU3ZDBVeE5rUk85MGd4WlRuejFVa1pRR3Y1WHZpMkdXcmJ1YW9nblhMZUlxeDUxY05IRk4tOE1QQk9QZGFKSjNwSFM0VXltRkUzMWxLYWduNk1kSWJodzBCaUlhT2pvUkhiRFd3aUsyWEdfbGdLZnlXSk41VTBGbnNxWHdqbmE5R2hPYUwzVDVTTkJmdExPYl9wRTNiazN1WQ%3D%3D; OpenIdConnect.nonce.webapp.YzZ2dy9WOVPOgAU5ji1v2HhurboiMp4Z7KnwF%2BNKw9M%3D=elIwdWZrRjJmZnh4ZHQ4akhrcnBlRmpzX0dzX21RZGhicHI4RGEyaUJIYlZrSEs1WExYTEJmTHVpZVNQT0VjRUFRWjJkQXFWdmtQVHVWX1ZiSG5LNVNDOFJ3M09GOWhGejZGUVV5YTZST0FfUjNiME5Xb2N4OXk4VzRyZkZaR1BPQUw0VFh4Yl9Kckl4OGh4WTFWdEpKZUhvZ3NsMnhiV0ctX1NubXNNSUQxT3dLbXZxWXVncTN6WXJqdmZwcEpFckdyZ01PYjUxNFRGSGlvRFZDWnljV3FEeWM1elk4Zm9hS0tZaGJCSzN4WQ%3D%3D
+
